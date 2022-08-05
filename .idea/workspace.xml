@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2AcuYtz8GtlcIMqNvV9iC5ls4g8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/enterprise-application",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "86e883aeefd6f0e70551d0d7c1da93ba"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.skillsauditor.skill.ui.skill" />
+      <recent name="com.example.skillsauditor.employee.ui.manager" />
+      <recent name="com.example.skillsauditor.employee.infrastructure.staff" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\enterprise-application\src\main\java\com\example\skillsauditor\skill\domain\common" />
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\enterprise-application\src\main\java\com\example\skillsauditor\identity" />
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\not-git-enterprise-app\skills-auditor\src\main\java\com\example\skillsauditor\common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\enterprise-application\src\main\java\com\example\skillsauditor\employee" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.skillsauditor.employee.domain.manager.interfaces" />
+      <recent name="com.example.skillsauditor.employee.application.manager.commands" />
+      <recent name="com.example.skillsauditor.skill.infrastructure.skill" />
+      <recent name="com.example.skillsauditor.skill.application.category" />
+      <recent name="com.example.skillsauditor.skill.application.category.interfaces" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.skillsauditor.skill.domain.common" />
+      <recent name="com.example.skillsauditor.common" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SkillsAuditorApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="enterprise-application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="enterprise-application" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillBcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="skill-bc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.skillbc.SkillBcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillsAuditorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="employee-bc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.skillsauditor.SkillsAuditorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="" />
+      <created>1655321249950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655321249950</updated>
+      <workItem from="1655321251284" duration="223000" />
+      <workItem from="1655321488298" duration="700000" />
+      <workItem from="1656079507788" duration="711000" />
+      <workItem from="1657787025017" duration="3584000" />
+      <workItem from="1657881157431" duration="8584000" />
+      <workItem from="1657977345085" duration="6105000" />
+      <workItem from="1658133366934" duration="19387000" />
+      <workItem from="1658217284456" duration="19065000" />
+      <workItem from="1658305953684" duration="15181000" />
+      <workItem from="1658391248220" duration="12182000" />
+      <workItem from="1658477743468" duration="11193000" />
+      <workItem from="1658741233948" duration="12404000" />
+      <workItem from="1658825902638" duration="14063000" />
+      <workItem from="1658916248154" duration="8477000" />
+      <workItem from="1658931569464" duration="10557000" />
+      <workItem from="1659012403527" duration="6506000" />
+      <workItem from="1659083440087" duration="32428000" />
+      <workItem from="1659452611694" duration="3460000" />
+      <workItem from="1659531172162" duration="9279000" />
+      <workItem from="1659551122829" duration="3257000" />
+      <workItem from="1659554714331" duration="4746000" />
+      <workItem from="1659599382335" duration="5685000" />
+      <workItem from="1659663531146" duration="8212000" />
+      <workItem from="1659698470346" duration="990000" />
+      <workItem from="1659699485676" duration="116000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/employee/domain/staff/StaffSkillJpaToStaffSkillMapper.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/employee/domain/staff/StaffSkillJpaToStaffSkillMapper.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/employee/domain/staff/StaffSkillJpaToStaffSkillMapper.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/employee/domain/staff/StaffSkillJpaToStaffSkillMapper.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/employee/domain/staff/StaffSkillJpaToStaffSkillMapper.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/skill/infrastructure/skill/SkillJpa.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
