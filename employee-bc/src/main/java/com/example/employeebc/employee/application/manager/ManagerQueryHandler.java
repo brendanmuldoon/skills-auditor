@@ -82,7 +82,7 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
     public EmployeeSkillDTOList findSkillsByCategory(String categoryId) {
 
 
-        String URL = String.format("http://localhost:8080/skill/findAllSkillsByCategory/%s", categoryId); //Assuming the other context is running on 8901
+        String URL = String.format("http://localhost:8081/skill/findAllSkillsByCategory/%s", categoryId); //Assuming the other context is running on 8901
         RestTemplate restTemplate = new RestTemplate();
         EmployeeSkillDTOList myRequiredData = new EmployeeSkillDTOList();
 

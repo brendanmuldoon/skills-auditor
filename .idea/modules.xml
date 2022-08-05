@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../skills-aditor-new/skills-auditor/employee-bc/employee-bc.iml" filepath="$PROJECT_DIR$/../skills-aditor-new/skills-auditor/employee-bc/employee-bc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../skills-aditor-new/skills-auditor/skill-bc/skill-bc.iml" filepath="$PROJECT_DIR$/../skills-aditor-new/skills-auditor/skill-bc/skill-bc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/employee-bc/employee-bc.iml" filepath="$PROJECT_DIR$/employee-bc/employee-bc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skill-bc/skill-bc.iml" filepath="$PROJECT_DIR$/skill-bc/skill-bc.iml" />
     </modules>
   </component>
 </project>
