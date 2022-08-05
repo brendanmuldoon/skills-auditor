@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/IdentityBcApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/test/java/com/example/identitybc/IdentityBcApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +81,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "spring.configuration.checksum": "86e883aeefd6f0e70551d0d7c1da93ba"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "08e38be90d998a65220883f070d2c850"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -144,6 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IdentityBcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="identity-bc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.identitybc.IdentityBcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SkillBcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="skill-bc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.skillbc.SkillBcApplication" />
@@ -192,6 +206,7 @@
       <workItem from="1659663531146" duration="8212000" />
       <workItem from="1659698470346" duration="990000" />
       <workItem from="1659699485676" duration="116000" />
+      <workItem from="1659714048085" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
@@ -219,6 +234,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../skills-aditor-new/skills-auditor" />
+    </ignored-roots>
     <MESSAGE value="query handler" />
     <option name="LAST_COMMIT_MESSAGE" value="query handler" />
   </component>
