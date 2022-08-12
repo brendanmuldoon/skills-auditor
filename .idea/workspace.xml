@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/identity-bc/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/IdentityBcApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/test/java/com/example/identitybc/IdentityBcApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IdentityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/UserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/repo/AppUserJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/repo/RoleJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/repo/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/service/DTO/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-bc/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +40,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -76,13 +84,13 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/skill-bc",
+    "last_opened_file_path": "C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/identity-bc/src/main/java/com/example/identitybc/repo",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "08e38be90d998a65220883f070d2c850"
+    "spring.configuration.checksum": "3c8546c501913834c79552355b7d5847"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -92,24 +100,28 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.identitybc.controller" />
       <recent name="com.example.skillsauditor.skill.ui.skill" />
       <recent name="com.example.skillsauditor.employee.ui.manager" />
       <recent name="com.example.skillsauditor.employee.infrastructure.staff" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\skills-auditor-new-new\identity-bc\src\main\java\com\example\identitybc\repo" />
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\skills-auditor-new-new\identity-bc\src\main\resources" />
       <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\enterprise-application\src\main\java\com\example\skillsauditor\skill\domain\common" />
       <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\enterprise-application\src\main\java\com\example\skillsauditor\identity" />
       <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\not-git-enterprise-app\skills-auditor\src\main\java\com\example\skillsauditor\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\skills-auditor-new-new\" />
       <recent name="C:\Users\612847413\OneDrive - BT Plc\Documents\Staffs Uni Work\Year 3\Enterprise Application Development\enterprise-application\src\main\java\com\example\skillsauditor\employee" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.identitybc.service" />
       <recent name="com.example.skillsauditor.employee.domain.manager.interfaces" />
       <recent name="com.example.skillsauditor.employee.application.manager.commands" />
       <recent name="com.example.skillsauditor.skill.infrastructure.skill" />
       <recent name="com.example.skillsauditor.skill.application.category" />
-      <recent name="com.example.skillsauditor.skill.application.category.interfaces" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.skillsauditor.skill.domain.common" />
@@ -123,7 +135,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SkillBcApplication">
+  <component name="RunManager" selected="Spring Boot.IdentityBcApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="enterprise-application" />
       <method v="2">
@@ -206,7 +218,10 @@
       <workItem from="1659663531146" duration="8212000" />
       <workItem from="1659698470346" duration="990000" />
       <workItem from="1659699485676" duration="116000" />
-      <workItem from="1659714048085" duration="725000" />
+      <workItem from="1659714048085" duration="961000" />
+      <workItem from="1659965428208" duration="1314000" />
+      <workItem from="1660115126038" duration="1850000" />
+      <workItem from="1660310843504" duration="2691000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
