@@ -13,4 +13,8 @@ public class EditSkillCommand implements IEditSkillCommand {
     private String skillId;
     private String description;
 
+    private String managerId;
+    private String username;
+    private String token;
+
 }

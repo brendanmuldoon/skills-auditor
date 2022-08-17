@@ -4,6 +4,7 @@ import com.example.employeebc.employee.application.manager.commands.*;
 import com.example.employeebc.employee.application.manager.queries.EmployeeSkillDTOList;
 import com.example.employeebc.employee.application.manager.queries.GetTeamBySkillIdQuery;
 import lombok.AllArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -19,6 +20,8 @@ public class ManagerController {
     private IManagerQueryHandler queryHandler;
 
     private IManagerApplicationService applicationService;
+
+    private IIdentityService identityService;
 
     // find all managers
     @GetMapping("/findAll") // REMOVE
@@ -37,7 +40,6 @@ public class ManagerController {
         }
     }
 
-    // find all staff in managers team by manager id
     @GetMapping("/team/{manager_id}") // REMOVE
     public List<?> getManagerTeamById(@PathVariable(value = "manager_id") String managerId) {
         List<?> response = queryHandler.findTeamByManagerId(managerId);
@@ -48,48 +50,58 @@ public class ManagerController {
         }
     }
 
-    // find all staff with certain skill
-    @GetMapping("/team/bySkill")
-    public List<?> getManagerTeamBySkillId(@RequestBody GetTeamBySkillIdQuery getTeamBySkillIdQuery) {
-        List<?> response = queryHandler.findTeamBySkillId(getTeamBySkillIdQuery);
-        if(!response.isEmpty()) {
-            return response;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    @PostMapping("/team/bySkill/{skill_id}") // -- Tested: ok
+    public List<?> getManagerTeamBySkillId(@PathVariable(value = "skill_id") String skillId,
+                                           @RequestBody UserDetails command) {
+        if(identityService.isAdmin(command)) {
+            List<?> response = queryHandler.findTeamBySkillId(command.getId(), skillId);
+            if(!response.isEmpty()) {
+                return response;
+            } else {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            }
         }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
     }
 
-    // find all staff with expired skills -- can't do this until I set up a real DB
     @GetMapping("/team/expiredSkills")
     public void getAllStaffWithExpiredSkills() {
         // do nothing for now
     }
 
-    // allocate staff to manager
-    @PutMapping("/team/addToTeam")
-    public void updateManagerTeam(@RequestBody UpdateManagerTeamCommand updateManagerTeamCommand) {
-        applicationService.addStaffToManagerTeam(updateManagerTeamCommand);
+    @PostMapping("/team/addToTeam/{staff_id}") // -- Tested: ok
+    public void updateManagerTeam(@PathVariable(value = "staff_id") String staffId,
+                                  @RequestBody UserDetails command) {
+        if(identityService.isAdmin(command)) {
+            applicationService.addStaffToManagerTeam(command.getId(), staffId);
+        }
     }
 
-    // Add skill
-    @PostMapping("/createSkill")
+    @PostMapping("/createSkill") // -- Tested: ok
     public void createSkill(@RequestBody CreateSkillCommand createSkillCommand) {
-        applicationService.createSkill(createSkillCommand);
+        UserDetails userDetails = new UserDetails(createSkillCommand.getManagerId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails)) {
+            applicationService.createSkill(createSkillCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
+        }
     }
 
-    // edit skill
-    @PutMapping("/editSkill")
+    @PutMapping("/editSkill") // -- Tested: ok
     public void editSkill(@RequestBody EditSkillCommand editSkillCommand) {
-        applicationService.editSkill(editSkillCommand);
+        UserDetails userDetails = new UserDetails(editSkillCommand.getManagerId(), editSkillCommand.getToken(), editSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails)) {
+            applicationService.editSkill(editSkillCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
+        }
     }
 
-    // delete skill
     @DeleteMapping("/deleteSkill")
     public void deleteSkill(@RequestBody DeleteSkillCommand deleteSkillCommand) {
         applicationService.deleteSkill(deleteSkillCommand);
     }
 
-    // view all skills by category
     @GetMapping("/findAllSkillsByCategory/{category_id}")
     public EmployeeSkillDTOList getSkillsByCategoryId(@PathVariable(name = "category_id") String categoryId){
         EmployeeSkillDTOList response = queryHandler.findSkillsByCategory(categoryId);
@@ -100,7 +112,6 @@ public class ManagerController {
         }
     }
 
-    // add category
     @PostMapping("/createCategory")
     public void createCategory(@RequestBody CreateCategoryCommand createSkillCommand) {
         applicationService.createCategory(createSkillCommand);

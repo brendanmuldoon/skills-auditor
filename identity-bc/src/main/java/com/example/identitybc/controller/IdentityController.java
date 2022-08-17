@@ -31,4 +31,18 @@ public class IdentityController {
         return ResponseEntity.badRequest().body("Invalid details provided");
     }
 
+    @PostMapping("/validateRole")
+    public ResponseEntity<?> validateRole(@RequestBody UserDetails command){
+        boolean valid = jwtTokenUtil.validateToken(command.getToken(), command.getUsername());
+        if (valid) return ResponseEntity.ok(jwtTokenUtil.getRoleFromToken(command.getToken()));
+        return ResponseEntity.badRequest().body("Invalid details provided");
+    }
+
+    @PostMapping("/id")
+    public ResponseEntity<?> getID(@RequestBody UserDetails command){
+        boolean valid = jwtTokenUtil.validateToken(command.getToken(), command.getUsername());
+        if (valid) return ResponseEntity.ok(jwtTokenUtil.getIDFromToken(command.getToken()));
+        return ResponseEntity.badRequest().body("Invalid details provided");
+    }
+
 }

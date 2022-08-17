@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IdentityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/UserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/repo/AppUserJpa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/repo/RoleJpa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/repo/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/service/DTO/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/commands/UserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IIdentityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-bc/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/commands/CreateSkillCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/commands/CreateSkillCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/commands/EditSkillCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/commands/EditSkillCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IdentityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IdentityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/JwtTokenUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,32 +71,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/identity-bc/src/main/java/com/example/identitybc/repo",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "3c8546c501913834c79552355b7d5847"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/identity-bc/src/main/java/com/example/identitybc/repo&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3c8546c501913834c79552355b7d5847&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.identitybc.controller" />
@@ -135,7 +134,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.IdentityBcApplication">
+  <component name="RunManager" selected="Spring Boot.EmployeeBcApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="enterprise-application" />
       <method v="2">
@@ -221,7 +220,9 @@
       <workItem from="1659714048085" duration="961000" />
       <workItem from="1659965428208" duration="1314000" />
       <workItem from="1660115126038" duration="1850000" />
-      <workItem from="1660310843504" duration="2691000" />
+      <workItem from="1660310843504" duration="3295000" />
+      <workItem from="1660567951824" duration="2246000" />
+      <workItem from="1660740784760" duration="3244000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

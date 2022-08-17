@@ -62,13 +62,13 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
     }
 
     @Override
-    public List<ManagerTeamDTO> findTeamBySkillId(IGetTeamBySkillIdQuery getTeamBySkillIdQuery) {
-        Optional<ManagerJpa> response = managerRepository.findById(getTeamBySkillIdQuery.getManagerId());
+    public List<ManagerTeamDTO> findTeamBySkillId(String managerId, String skillId) {
+        Optional<ManagerJpa> response = managerRepository.findById(managerId);
         if(response.isPresent()) {
             List<ManagerTeamDTO> membersWithSkill = new ArrayList<>();
             List<ManagerTeamDTO> team = ManagerJpaToDTOMapper.convertManagerTeamToDTO(response.get());
             team.forEach(t -> t.getSkills().forEach(s -> {
-                if(s.getSkillId().equals(getTeamBySkillIdQuery.getSkillId())) {
+                if(s.getSkillId().equals(skillId)) {
                     membersWithSkill.add(t);
                 }
             } ));

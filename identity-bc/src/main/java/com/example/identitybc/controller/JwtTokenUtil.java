@@ -22,7 +22,6 @@ public class JwtTokenUtil {
     @Value("${jwt.secret}")
     private String secret;
 
-    //retrieve expiration date from jwt token
     public Date getExpirationDateFromToken(String token) {
         return getClaimFromToken(token, Claims::getExpiration);
     }
@@ -31,7 +30,6 @@ public class JwtTokenUtil {
         final Claims claims = getAllClaimsFromToken(token);
         return claimsResolver.apply(claims);
     }
-    //for retrieveing any information from token we will need the secret key
     private Claims getAllClaimsFromToken(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
@@ -54,30 +52,22 @@ public class JwtTokenUtil {
         return tokenFactory(claims, userDetails.getUserName());
     }
 
-    //while creating the token -
-    //1. Define  claims of the token, like Issuer, Expiration, Subject, and the ID
-    //2. Sign the JWT using the HS512 algorithm and secret key.
-    //3. According to JWS Compact Serialization(https://tools.ietf.org/html/draft-ietf-jose-json-web-signature-41#section-3.1)
-    //   compaction of the JWT to a URL-safe string
+
     private String tokenFactory(Map<String, Object> claims, String subject) {
         return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
     }
 
-    //validate token
     public Boolean validateToken(String token, String username) {
         final String USERNAME = getListOfClaimsFromToken(token).get(UserDTO.USERNAME).toString();
-        System.out.println(USERNAME);
         return (USERNAME.equals(username) && !isTokenExpired(token));
     }
 
-    //retrieve id from jwt token
     public String getIDFromToken(String token) {
         return getListOfClaimsFromToken(token).get(UserDTO.ID).toString();
     }
 
-    //retrieve role from jwt token
     public String getRoleFromToken(String token) {
         return getListOfClaimsFromToken(token).get(UserDTO.ROLE).toString();
     }

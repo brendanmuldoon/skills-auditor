@@ -3,7 +3,7 @@ package com.example.employeebc.employee.ui.manager;
 import com.example.employeebc.employee.domain.manager.interfaces.*;
 
 public interface IManagerApplicationService {
-    void addStaffToManagerTeam(IUpdateManagerTeamCommand updateManagerTeamCommand);
+    void addStaffToManagerTeam(String managerId, String staffId);
 
     void createSkill(ICreateSkillCommand createSkillCommand);
 

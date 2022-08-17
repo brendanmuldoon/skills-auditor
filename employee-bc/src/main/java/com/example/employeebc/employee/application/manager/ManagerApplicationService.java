@@ -60,17 +60,17 @@ public class ManagerApplicationService implements IManagerApplicationService {
     }
 
     @Override
-    public void addStaffToManagerTeam(IUpdateManagerTeamCommand updateManagerTeamCommand) {
-        Optional<ManagerJpa> managerJpa = managerRepository.findById(updateManagerTeamCommand.getManagerId());
-        Optional<StaffJpa> staffJpa = staffRepository.findById(updateManagerTeamCommand.getStaffId());
+    public void addStaffToManagerTeam(String managerId, String staffId) {
+        Optional<ManagerJpa> managerJpa = managerRepository.findById(managerId);
+        Optional<StaffJpa> staffJpa = staffRepository.findById(staffId);
         if(managerJpa.isPresent()) {
 
             if (staffJpa.isPresent()) {
 
                 Manager manager = managerJpaToManagerMapper.map(managerJpa.get());
 
-                ManagerTeam teamMember = ManagerTeam.managerTeamOf(updateManagerTeamCommand.getStaffId(),
-                        updateManagerTeamCommand.getManagerId());
+                ManagerTeam teamMember = ManagerTeam.managerTeamOf(staffId,
+                        managerId);
 
                 manager.addTeamMember(teamMember);
 
