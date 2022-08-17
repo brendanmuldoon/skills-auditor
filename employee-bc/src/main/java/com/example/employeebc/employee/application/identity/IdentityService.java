@@ -29,8 +29,8 @@ public class IdentityService implements IIdentityService {
         return response;
     }
 
-    public boolean isSpecifiedUser(UserDetails command, String buyer_id){
-        return getID(command).equals(buyer_id);
+    public boolean isSpecifiedUser(UserDetails command, String employeeId){
+        return getID(command).equals(employeeId);
     }
 
 

@@ -8,7 +8,7 @@ public interface IIdentityService {
 
     String getID(UserDetails command);
 
-    boolean isSpecifiedUser(UserDetails command, String buyer_id);
+    boolean isSpecifiedUser(UserDetails command, String employeeId);
 
 
     boolean isAdmin(UserDetails command);

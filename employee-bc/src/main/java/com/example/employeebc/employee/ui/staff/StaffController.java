@@ -1,6 +1,8 @@
 package com.example.employeebc.employee.ui.staff;
 
+import com.example.employeebc.employee.application.manager.commands.UserDetails;
 import com.example.employeebc.employee.application.staff.commands.*;
+import com.example.employeebc.employee.ui.manager.IIdentityService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,9 @@ public class StaffController {
     private IStaffQueryHandler queryHandler;
     private IStaffApplicationService applicationService;
 
+    private IIdentityService identityService;
+
+
     @GetMapping("/findAll") // REMOVE
     public Iterable<?> getAllStaffDetails() {
         return queryHandler.findAll();
@@ -32,9 +37,14 @@ public class StaffController {
         }
     }
 
-    @PutMapping("/updateDetails")
+    @PutMapping("/updateDetails") // -- Tested: ok
     public void updateStaffDetails(@RequestBody UpdateStaffDetailsCommand updateStaffDetailsCommand) {
-        applicationService.updateStaffDetails(updateStaffDetailsCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(updateStaffDetailsCommand.getStaffId(), updateStaffDetailsCommand.getToken(), updateStaffDetailsCommand.getUsername());
+        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffDetailsCommand.getStaffId())) {
+            applicationService.updateStaffDetails(updateStaffDetailsCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+        }
     }
 
     @PostMapping("/createStaff") // REMOVE
@@ -57,9 +67,14 @@ public class StaffController {
         }
     }
 
-    @PostMapping("/staffSkill/add")
+    @PostMapping("/staffSkill/add") // -- Tested: ok
     public void addStaffSkill(@RequestBody AddStaffSkillCommand addStaffSkillCommand) {
-        applicationService.addStaffSkill(addStaffSkillCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(addStaffSkillCommand.getStaffId(), addStaffSkillCommand.getToken(), addStaffSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, addStaffSkillCommand.getStaffId())) {
+            applicationService.addStaffSkill(addStaffSkillCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+        }
     }
 
     @DeleteMapping("/staffSkill/removeSkill")

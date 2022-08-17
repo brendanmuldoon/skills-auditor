@@ -14,4 +14,8 @@ public interface IUpdateStaffDetailsCommand {
     String getRole();
 
     SecurityCredentials getSecurityCredentials();
+
+    String getToken();
+
+    String getUsername();
 }

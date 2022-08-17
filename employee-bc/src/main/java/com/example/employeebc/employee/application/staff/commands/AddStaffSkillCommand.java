@@ -14,4 +14,7 @@ public class AddStaffSkillCommand implements IAddStaffSkillCommand {
     private String strengthOfSkill;
     private ExpirationDate expirationDate;
     private String staffId;
+
+    private String token;
+    private String username;
 }

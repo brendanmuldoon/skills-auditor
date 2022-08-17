@@ -18,4 +18,7 @@ public class UpdateStaffDetailsCommand implements IUpdateStaffDetailsCommand {
     private Address address;
     private String role;
     private SecurityCredentials  securityCredentials;
+
+    private String token;
+    private String username;
 }
