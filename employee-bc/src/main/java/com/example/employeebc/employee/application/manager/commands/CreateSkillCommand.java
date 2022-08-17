@@ -13,7 +13,7 @@ public class CreateSkillCommand implements ICreateSkillCommand {
     private String description;
     private String categoryId;
 
-    private String managerId;
+    private String id;
     private String username;
     private String token;
 

@@ -11,4 +11,8 @@ import lombok.ToString;
 public class CreateCategoryCommand implements ICreateCategoryCommand {
 
     private String description;
+
+    private String id;
+    private String token;
+    private String username;
 }

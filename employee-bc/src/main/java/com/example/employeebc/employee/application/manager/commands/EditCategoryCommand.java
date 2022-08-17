@@ -8,6 +8,10 @@ import lombok.Setter;
 @Setter
 public class EditCategoryCommand implements IEditCategoryCommand {
 
-    private String id;
+    private String categoryId;
     private String description;
+
+    private String id;
+    private String token;
+    private String username;
 }

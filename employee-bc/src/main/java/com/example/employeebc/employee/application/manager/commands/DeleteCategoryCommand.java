@@ -8,5 +8,9 @@ import lombok.Setter;
 @Setter
 public class DeleteCategoryCommand  implements IDeleteCategoryCommand {
 
+    private String categoryId;
+
     private String id;
+    private String token;
+    private String username;
 }

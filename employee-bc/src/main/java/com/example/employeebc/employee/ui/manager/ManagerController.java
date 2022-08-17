@@ -79,7 +79,7 @@ public class ManagerController {
 
     @PostMapping("/createSkill") // -- Tested: ok
     public void createSkill(@RequestBody CreateSkillCommand createSkillCommand) {
-        UserDetails userDetails = new UserDetails(createSkillCommand.getManagerId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
+        UserDetails userDetails = UserDetails.userDetailsOf(createSkillCommand.getId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
             applicationService.createSkill(createSkillCommand);
         } else {
@@ -89,7 +89,7 @@ public class ManagerController {
 
     @PutMapping("/editSkill") // -- Tested: ok
     public void editSkill(@RequestBody EditSkillCommand editSkillCommand) {
-        UserDetails userDetails = new UserDetails(editSkillCommand.getManagerId(), editSkillCommand.getToken(), editSkillCommand.getUsername());
+        UserDetails userDetails = UserDetails.userDetailsOf(editSkillCommand.getId(), editSkillCommand.getToken(), editSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
             applicationService.editSkill(editSkillCommand);
         } else {
@@ -97,36 +97,61 @@ public class ManagerController {
         }
     }
 
-    @DeleteMapping("/deleteSkill")
+    @DeleteMapping("/deleteSkill") // -- Tested: ok
     public void deleteSkill(@RequestBody DeleteSkillCommand deleteSkillCommand) {
-        applicationService.deleteSkill(deleteSkillCommand);
-    }
-
-    @GetMapping("/findAllSkillsByCategory/{category_id}")
-    public EmployeeSkillDTOList getSkillsByCategoryId(@PathVariable(name = "category_id") String categoryId){
-        EmployeeSkillDTOList response = queryHandler.findSkillsByCategory(categoryId);
-        if(!response.getSkills().isEmpty()) {
-            return response;
+        UserDetails userDetails = UserDetails.userDetailsOf(deleteSkillCommand.getId(), deleteSkillCommand.getToken(), deleteSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails)) {
+            applicationService.deleteSkill(deleteSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Category id: '%s' not found", categoryId));
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
         }
     }
 
-    @PostMapping("/createCategory")
+    @PostMapping("/findAllSkillsByCategory/{category_id}") // -- Tested: ok
+    public EmployeeSkillDTOList getSkillsByCategoryId(@PathVariable(name = "category_id") String categoryId,
+                                                      @RequestBody UserDetails userDetails){
+        if(identityService.isAdmin(userDetails)) {
+            EmployeeSkillDTOList response = queryHandler.findSkillsByCategory(categoryId);
+            if(!response.getSkills().isEmpty()) {
+                return response;
+            } else {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Category id: '%s' not found", categoryId));
+            }
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
+
+    }
+
+    @PostMapping("/createCategory") // -- Tested: ok
     public void createCategory(@RequestBody CreateCategoryCommand createSkillCommand) {
-        applicationService.createCategory(createSkillCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(createSkillCommand.getId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
+        if (identityService.isAdmin(userDetails)) {
+            applicationService.createCategory(createSkillCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
+        }
     }
 
     // edit category
-    @PutMapping("/editCategory")
+    @PutMapping("/editCategory") // -- Tested: ok
     public void editCategory(@RequestBody EditCategoryCommand editCategoryCommand) {
-        applicationService.editCategory(editCategoryCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(editCategoryCommand.getId(), editCategoryCommand.getToken(), editCategoryCommand.getUsername());
+        if (identityService.isAdmin(userDetails)) {
+            applicationService.editCategory(editCategoryCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
+        }
     }
 
     // delete category
-    @DeleteMapping("/deleteCategory")
+    @DeleteMapping("/deleteCategory") // Tested: ok
     public void deleteCategory(@RequestBody DeleteCategoryCommand deleteCategoryCommand) {
-        applicationService.deleteCategory(deleteCategoryCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(deleteCategoryCommand.getId(), deleteCategoryCommand.getToken(), deleteCategoryCommand.getUsername());
+        if(identityService.isAdmin(userDetails)) {
+            applicationService.deleteCategory(deleteCategoryCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not authorised");
+        }
     }
 
 }

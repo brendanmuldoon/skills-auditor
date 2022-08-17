@@ -14,4 +14,8 @@ public class UserDetails {
     private String id;
     private String token;
     private String username;
+
+    public static UserDetails userDetailsOf(String id, String token, String username) {
+        return new UserDetails(id, token, username);
+    }
 }

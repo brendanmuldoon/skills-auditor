@@ -9,4 +9,9 @@ import lombok.Setter;
 public class DeleteSkillCommand implements IDeleteSkillCommand {
 
     private String skillId;
+
+
+    private String id;
+    private String username;
+    private String token;
 }

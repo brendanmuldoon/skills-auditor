@@ -173,7 +173,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
     public void editCategory(IEditCategoryCommand editCategoryCommand) {
 
         EmployeeEditCategoryEvent event = new EmployeeEditCategoryEvent();
-        event.setId(editCategoryCommand.getId());
+        event.setId(editCategoryCommand.getCategoryId());
         event.setDescription(editCategoryCommand.getDescription());
 
         try {
@@ -191,7 +191,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
     public void deleteCategory(IDeleteCategoryCommand editCategoryCommand) {
 
         EmployeeDeleteCategoryEvent event = new EmployeeDeleteCategoryEvent();
-        event.setId(editCategoryCommand.getId());
+        event.setId(editCategoryCommand.getCategoryId());
 
         try {
             String eventToJon = objectMapper.writeValueAsString(event);
