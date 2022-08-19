@@ -16,5 +16,9 @@ public class UpdateStaffSkillCommand implements IUpdateStaffSkillCommand {
     private ExpirationDate expirationDate;
     private String staffId;
 
+    private String userId;
+    private String token;
+    private String username;
+
 
 }

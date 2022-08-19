@@ -15,62 +15,23 @@ import java.util.Optional;
 @RestController
 @AllArgsConstructor
 public class StaffController {
-
-    private IStaffQueryHandler queryHandler;
     private IStaffApplicationService applicationService;
-
     private IIdentityService identityService;
 
-
-    @GetMapping("/findAll") // REMOVE
-    public Iterable<?> getAllStaffDetails() {
-        return queryHandler.findAll();
-    }
-
-    @GetMapping("/{staffId}") // REMOVE
-    public Optional<?> getStaffDetailsByStaffId(@PathVariable(value = "staffId") String staffId) {
-        Optional<?> response = queryHandler.findByStaffId(staffId);
-        if(response.isPresent()) {
-            return response;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Staff id: '%s' not found", staffId));
-        }
-    }
-
-    @PutMapping("/updateDetails") // -- Tested: ok
+    @PutMapping("/updateDetails")
     public void updateStaffDetails(@RequestBody UpdateStaffDetailsCommand updateStaffDetailsCommand) {
-        UserDetails userDetails = UserDetails.userDetailsOf(updateStaffDetailsCommand.getStaffId(), updateStaffDetailsCommand.getToken(), updateStaffDetailsCommand.getUsername());
-        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffDetailsCommand.getStaffId())) {
+        UserDetails userDetails = UserDetails.userDetailsOf(updateStaffDetailsCommand.getUserId(), updateStaffDetailsCommand.getToken(), updateStaffDetailsCommand.getUsername());
+        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffDetailsCommand.getUserId())) {
             applicationService.updateStaffDetails(updateStaffDetailsCommand);
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
         }
     }
 
-    @PostMapping("/createStaff") // REMOVE
-    public void createStaff(@RequestBody CreateStaffCommand createStaffCommand) {
-        applicationService.createStaff(createStaffCommand);
-    }
-
-    @DeleteMapping("/deleteStaff") // REMOVE
-    public void deleteStaff(@RequestBody DeleteStaffCommand deleteStaffCommand) {
-        applicationService.deleteStaff(deleteStaffCommand);
-    }
-
-    @GetMapping("staffSkill/{staffId}") // REMOVE
-    public List<?> getStaffSkillsDetailsByStaffId(@PathVariable(value = "staffId") String staffId) {
-        List<?> response = queryHandler.findSkillsByStaffId(staffId);
-        if(!response.isEmpty()) {
-            return response;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Staff id: '%s' not found", staffId));
-        }
-    }
-
-    @PostMapping("/staffSkill/add") // -- Tested: ok
+    @PostMapping("/staffSkill/add")
     public void addStaffSkill(@RequestBody AddStaffSkillCommand addStaffSkillCommand) {
-        UserDetails userDetails = UserDetails.userDetailsOf(addStaffSkillCommand.getStaffId(), addStaffSkillCommand.getToken(), addStaffSkillCommand.getUsername());
-        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, addStaffSkillCommand.getStaffId())) {
+        UserDetails userDetails = UserDetails.userDetailsOf(addStaffSkillCommand.getUserId(), addStaffSkillCommand.getToken(), addStaffSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, addStaffSkillCommand.getUserId())) {
             applicationService.addStaffSkill(addStaffSkillCommand);
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
@@ -79,12 +40,22 @@ public class StaffController {
 
     @DeleteMapping("/staffSkill/removeSkill")
     public void removeStaffSkill(@RequestBody RemoveStaffSkillCommand removeStaffSkillCommand) {
-        applicationService.removeStaffSkill(removeStaffSkillCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(removeStaffSkillCommand.getUserId(), removeStaffSkillCommand.getToken(), removeStaffSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, removeStaffSkillCommand.getUserId())) {
+            applicationService.removeStaffSkill(removeStaffSkillCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+        }
     }
 
     @PutMapping("/staffSkill/updateSkill")
     public void updateStaffSkill(@RequestBody UpdateStaffSkillCommand updateStaffSkillCommand) {
-        applicationService.updateStaffSkill(updateStaffSkillCommand);
+        UserDetails userDetails = UserDetails.userDetailsOf(updateStaffSkillCommand.getUserId(), updateStaffSkillCommand.getToken(), updateStaffSkillCommand.getUsername());
+        if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffSkillCommand.getUserId())) {
+            applicationService.updateStaffSkill(updateStaffSkillCommand);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+        }
     }
 
 }

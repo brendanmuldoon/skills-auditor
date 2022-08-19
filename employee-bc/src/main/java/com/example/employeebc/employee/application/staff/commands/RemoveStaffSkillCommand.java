@@ -11,4 +11,8 @@ import lombok.ToString;
 public class RemoveStaffSkillCommand implements IRemoveStaffSkillCommand {
     private String staffId;
     private String skillId;
+
+    private String userId;
+    private String token;
+    private String username;
 }

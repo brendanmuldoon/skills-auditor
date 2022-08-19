@@ -21,34 +21,7 @@ public class ManagerController {
 
     private IIdentityService identityService;
 
-    // find all managers
-    @GetMapping("/findAll") // REMOVE
-    public Iterable<?> getAllManagerDetails() {
-        return queryHandler.findAll();
-    }
-
-    // find manager by id
-    @GetMapping("{manager_id}") // REMOVE
-    public Optional<?> getManagerById(@PathVariable(value = "manager_id") String managerId) {
-        Optional<?> response = queryHandler.findByManagerId(managerId);
-        if(response.isPresent()) {
-            return response;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Manager id: '%s' not found", managerId));
-        }
-    }
-
-    @GetMapping("/team/{manager_id}") // REMOVE
-    public List<?> getManagerTeamById(@PathVariable(value = "manager_id") String managerId) {
-        List<?> response = queryHandler.findTeamByManagerId(managerId);
-        if(!response.isEmpty()) {
-            return response;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Manager id: '%s' not found", managerId));
-        }
-    }
-
-    @PostMapping("/team/bySkill/{skill_id}") // -- Tested: ok
+    @PostMapping("/team/bySkill/{skill_id}") 
     public List<?> getManagerTeamBySkillId(@PathVariable(value = "skill_id") String skillId,
                                            @RequestBody UserDetails command) {
         if(identityService.isAdmin(command)) {
@@ -67,7 +40,7 @@ public class ManagerController {
         // do nothing for now
     }
 
-    @PostMapping("/team/addToTeam/{staff_id}") // -- Tested: ok
+    @PostMapping("/team/addToTeam/{staff_id}")
     public void updateManagerTeam(@PathVariable(value = "staff_id") String staffId,
                                   @RequestBody UserDetails command) {
         if(identityService.isAdmin(command)) {
@@ -75,7 +48,7 @@ public class ManagerController {
         }
     }
 
-    @PostMapping("/createSkill") // -- Tested: ok
+    @PostMapping("/createSkill")
     public void createSkill(@RequestBody CreateSkillCommand createSkillCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(createSkillCommand.getId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
@@ -85,7 +58,7 @@ public class ManagerController {
         }
     }
 
-    @PutMapping("/editSkill") // -- Tested: ok
+    @PutMapping("/editSkill")
     public void editSkill(@RequestBody EditSkillCommand editSkillCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(editSkillCommand.getId(), editSkillCommand.getToken(), editSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
@@ -95,7 +68,7 @@ public class ManagerController {
         }
     }
 
-    @DeleteMapping("/deleteSkill") // -- Tested: ok
+    @DeleteMapping("/deleteSkill")
     public void deleteSkill(@RequestBody DeleteSkillCommand deleteSkillCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(deleteSkillCommand.getId(), deleteSkillCommand.getToken(), deleteSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
@@ -105,7 +78,7 @@ public class ManagerController {
         }
     }
 
-    @PostMapping("/findAllSkillsByCategory/{category_id}") // -- Tested: ok
+    @PostMapping("/findAllSkillsByCategory/{category_id}")
     public EmployeeSkillDTOList getSkillsByCategoryId(@PathVariable(name = "category_id") String categoryId,
                                                       @RequestBody UserDetails userDetails){
         if(identityService.isAdmin(userDetails)) {
@@ -120,7 +93,7 @@ public class ManagerController {
 
     }
 
-    @PostMapping("/createCategory") // -- Tested: ok
+    @PostMapping("/createCategory")
     public void createCategory(@RequestBody CreateCategoryCommand createSkillCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(createSkillCommand.getId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
         if (identityService.isAdmin(userDetails)) {
@@ -131,7 +104,7 @@ public class ManagerController {
     }
 
     // edit category
-    @PutMapping("/editCategory") // -- Tested: ok
+    @PutMapping("/editCategory")
     public void editCategory(@RequestBody EditCategoryCommand editCategoryCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(editCategoryCommand.getId(), editCategoryCommand.getToken(), editCategoryCommand.getUsername());
         if (identityService.isAdmin(userDetails)) {
@@ -142,7 +115,7 @@ public class ManagerController {
     }
 
     // delete category
-    @DeleteMapping("/deleteCategory") // Tested: ok
+    @DeleteMapping("/deleteCategory")
     public void deleteCategory(@RequestBody DeleteCategoryCommand deleteCategoryCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(deleteCategoryCommand.getId(), deleteCategoryCommand.getToken(), deleteCategoryCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {

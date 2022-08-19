@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/AddStaffSkillCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/AddStaffSkillCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/RemoveStaffSkillCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/RemoveStaffSkillCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/UpdateStaffDetailsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/UpdateStaffDetailsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/interfaces/IUpdateStaffDetailsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/interfaces/IUpdateStaffDetailsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IIdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IIdentityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/UpdateStaffSkillCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/commands/UpdateStaffSkillCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/StaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IdentityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-bc/src/main/java/com/example/identitybc/controller/IdentityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +216,8 @@
       <workItem from="1660115126038" duration="1850000" />
       <workItem from="1660310843504" duration="3295000" />
       <workItem from="1660567951824" duration="2246000" />
-      <workItem from="1660740784760" duration="7704000" />
+      <workItem from="1660740784760" duration="8298000" />
+      <workItem from="1660895525072" duration="1992000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
