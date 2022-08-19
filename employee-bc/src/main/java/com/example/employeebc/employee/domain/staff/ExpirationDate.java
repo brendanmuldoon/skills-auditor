@@ -11,9 +11,11 @@ import static com.example.employeebc.ApplicationConstants.*;
 @Getter
 @Setter
 public class ExpirationDate extends ValueObject {
-    
+
     private int month;
     private int year;
+
+    public ExpirationDate(){}
 
     public ExpirationDate(int month, int year) {
         checkIfSkillHasAlreadyExpired(month, year);
@@ -29,6 +31,7 @@ public class ExpirationDate extends ValueObject {
         this.year = year;
     }
 
+
     private void setExpiryMonth(int month) {
         if(month<1 || month >12){
             throw new IllegalArgumentException(String.format(SKILL_EXPIRY_MONTH_ERROR_MSG, month));
@@ -36,6 +39,7 @@ public class ExpirationDate extends ValueObject {
 
         this.month = month;
     }
+
 
 
     private void checkIfSkillHasAlreadyExpired(int month, int year) {
@@ -58,5 +62,10 @@ public class ExpirationDate extends ValueObject {
     public String toString() {
         return String.format("Expires %2d/%4d", month, year);
     }
-    
+
+    public void setExpiry(int year, int month) { // used for dto conversion when finding expired skills
+        this.year = year;
+        this.month = month;
+    }
+
 }

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/manager")
@@ -21,7 +20,7 @@ public class ManagerController {
 
     private IIdentityService identityService;
 
-    @PostMapping("/team/bySkill/{skill_id}") 
+    @PostMapping("/team/bySkill/{skill_id}")
     public List<?> getManagerTeamBySkillId(@PathVariable(value = "skill_id") String skillId,
                                            @RequestBody UserDetails command) {
         if(identityService.isAdmin(command)) {
@@ -35,9 +34,16 @@ public class ManagerController {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
     }
 
-    @GetMapping("/team/expiredSkills")
-    public void getAllStaffWithExpiredSkills() {
-        // do nothing for now
+    @PostMapping("/team/expiredSkills")
+    public List<?> getAllStaffWithExpiredSkills(@RequestBody UserDetails userDetails) {
+        if(identityService.isAdmin(userDetails)) {
+            List<?> response = queryHandler.findAllWithExpiredSkills();
+            if(!response.isEmpty()) {
+                return response;
+            }
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
     }
 
     @PostMapping("/team/addToTeam/{staff_id}")

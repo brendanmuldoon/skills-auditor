@@ -18,4 +18,6 @@ public interface IManagerQueryHandler {
     List<ManagerTeamDTO> findTeamBySkillId(String managerId, String skillId);
 
     EmployeeSkillDTOList findSkillsByCategory(String categoryId);
+
+    List<?> findAllWithExpiredSkills();
 }

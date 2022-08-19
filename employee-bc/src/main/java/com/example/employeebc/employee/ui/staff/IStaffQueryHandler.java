@@ -9,9 +9,5 @@ import java.util.Optional;
 
 public interface IStaffQueryHandler {
 
-    Iterable<StaffJpa> findAll();
-
-    Optional<StaffDTO> findByStaffId(String staffId);
-
-    List<StaffSkillDTO> findSkillsByStaffId(String staffId);
+    List<StaffDTO> findAllWithExpiredSkills();
 }

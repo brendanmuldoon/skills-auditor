@@ -16,7 +16,7 @@ VALUES  ('123e4567-e89b-12d3-a456-426614174000', 'Brendan', 'Muldoon', '5', 'Fox
 
 
 INSERT INTO staff_skills(skill_id, strength_of_skill, expiry, staff_id)
-VALUES ('c347b348-0c08-11ed-861d-0242ac120002', 'Basic', '2022-12-31', '5199227a-0845-11ed-861d-0242ac120002'),
+VALUES ('c347b348-0c08-11ed-861d-0242ac120002', 'Basic', '2022-01-01', '5199227a-0845-11ed-861d-0242ac120002'),
        ('d7332130-0c08-11ed-861d-0242ac120002', 'Intermediate', '2022-12-31', '5199227a-0845-11ed-861d-0242ac120002'),
        ('e44db664-0c08-11ed-861d-0242ac120002', 'Advanced', '2022-12-31', '5f52c9e8-0845-11ed-861d-0242ac120002');
 create sequence skills_sequence_id start with (select max(id) + 1 from staff_skills);
