@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/AddressTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/EmployeeTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/FullNameTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/IdentityTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/SecurityCredentialsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/FullName.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/FullName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/IdentityTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/IdentityTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +291,7 @@
       <workItem from="1660740784760" duration="8298000" />
       <workItem from="1660895525072" duration="10266000" />
       <workItem from="1660907111064" duration="1854000" />
-      <workItem from="1660914123677" duration="3147000" />
+      <workItem from="1660914123677" duration="3441000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
