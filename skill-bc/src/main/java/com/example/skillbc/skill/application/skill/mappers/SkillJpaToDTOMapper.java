@@ -24,22 +24,6 @@ public class SkillJpaToDTOMapper {
         return new SkillDTO(skillJpa.getId(), skillJpa.getDescription(), categoryDTO);
     }
 
-//    public static List<SkillDTO> convertSkillListToDTO(List<SkillJpa> response, String categoryId) {
-////        List<SkillDTO> skills = new ArrayList<>();
-////
-////        for (SkillJpa s : response) {
-////            if(s.getCategory().getId().equals(categoryId)) {
-////                SkillDTO skill = new SkillDTO(s.getId(),
-////                        s.getDescription(),
-////                        new CategoryDTO(s.getCategory().getId(),
-////                                s.getCategory().getDescription()));
-////                skills.add(skill);
-////            }
-////        }
-////
-////        return skills;
-////    }
-
     public static SkillDTOList convertSkillListToDTO(List<SkillJpa> response, String categoryId) {
         SkillDTOList skills = new SkillDTOList();
 

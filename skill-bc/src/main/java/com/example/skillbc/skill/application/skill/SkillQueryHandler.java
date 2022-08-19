@@ -40,12 +40,4 @@ public class SkillQueryHandler implements ISkillQueryHandler {
         return skillDTOList;
     }
 
-    // add skill
-    // edit skill
-    // delete skill
-    // add category
-    // edit category
-    // delete category
-    // view all skills by category
-
 }
