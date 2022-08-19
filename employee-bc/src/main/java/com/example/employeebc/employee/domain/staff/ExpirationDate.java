@@ -18,7 +18,7 @@ public class ExpirationDate extends ValueObject {
     public ExpirationDate(){}
 
     public ExpirationDate(int month, int year) {
-        checkIfSkillHasAlreadyExpired(month, year);
+        //checkIfSkillHasAlreadyExpired(month, year);
         setExpiryMonth(month);
         setExpiryYear(year);
     }

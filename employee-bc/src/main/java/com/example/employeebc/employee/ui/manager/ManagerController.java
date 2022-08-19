@@ -20,6 +20,20 @@ public class ManagerController {
 
     private IIdentityService identityService;
 
+    @PostMapping("/team/findTeamByManagerId/{manager_id}")
+    public List<?> getManagerTeam(@PathVariable(value = "manager_id") String managerId,
+                                  @RequestBody UserDetails command) {
+        if(identityService.isAdmin(command)) {
+            List<?> response = queryHandler.findTeamByManagerId(managerId);
+            if(!response.isEmpty()) {
+                return response;
+            } else {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "test");
+            }
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+    }
+
     @PostMapping("/team/bySkill/{skill_id}")
     public List<?> getManagerTeamBySkillId(@PathVariable(value = "skill_id") String skillId,
                                            @RequestBody UserDetails command) {

@@ -29,15 +29,25 @@ public class ManagerTeamJpaValueObject {
     @Column(name = "manager_id")
     private String manager;
 
+    @Column(name = "fullname_firstname")
+    private String fullname_firstname;
+
+    @Column(name="fullname_surname")
+    private String fullname_surname;
+
     public ManagerTeamJpaValueObject(){}
 
     public ManagerTeamJpaValueObject(
             long id,
             StaffJpa staffJpa,
-            String manager) {
+            String manager,
+            String fullname_firstname,
+            String fullname_surname) {
         this.id = id;
         this.staff = staffJpa;
         this.manager = manager;
+        this.fullname_firstname = fullname_firstname;
+        this.fullname_surname = fullname_surname;
     }
 
 }

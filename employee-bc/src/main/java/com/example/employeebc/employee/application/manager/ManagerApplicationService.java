@@ -5,6 +5,7 @@ import com.example.employeebc.employee.application.manager.interfaces.IManagerJp
 import com.example.employeebc.employee.application.manager.interfaces.IManagerRepository;
 import com.example.employeebc.employee.application.manager.interfaces.IManagerToManagerJpaMapper;
 import com.example.employeebc.employee.application.staff.interfaces.IStaffRepository;
+import com.example.employeebc.employee.domain.common.FullName;
 import com.example.employeebc.employee.domain.common.Identity;
 import com.example.employeebc.employee.domain.manager.Manager;
 import com.example.employeebc.employee.domain.manager.ManagerTeam;
@@ -70,7 +71,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
                 Manager manager = managerJpaToManagerMapper.map(managerJpa.get());
 
                 ManagerTeam teamMember = ManagerTeam.managerTeamOf(staffId,
-                        managerId);
+                        managerId, new FullName(staffJpa.get().getFullname_firstname(), staffJpa.get().getFullname_surname()));
 
                 manager.addTeamMember(teamMember);
 
@@ -78,7 +79,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
 
                 managerJpa1.setTeam(managerJpa.get().getTeam());
 
-                ManagerTeamJpaValueObject newTeamMember = new ManagerTeamJpaValueObject(teamMember.getId(), staffJpa.get(), managerJpa1.getId());
+                ManagerTeamJpaValueObject newTeamMember = new ManagerTeamJpaValueObject(teamMember.getId(), staffJpa.get(), managerJpa1.getId(), staffJpa.get().getFullname_firstname(), staffJpa.get().getFullname_surname());
 
                 managerJpa1.addTeamMember(newTeamMember);
 

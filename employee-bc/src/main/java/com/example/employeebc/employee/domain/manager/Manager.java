@@ -34,19 +34,4 @@ public class Manager extends Employee { // Aggregate
         }
     }
 
-    // remove team member
-    public void removeTeamMember(String staffId) {
-        for(ManagerTeam t : team) {
-            if(t.staffId().equals(staffId)) {
-                team.remove(t);
-                break;
-            }
-        }
-    }
-
-    // add to team
-
-    // remove team member
-
-    // get single team member
 }

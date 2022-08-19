@@ -1,21 +1,19 @@
 package com.example.employeebc.employee.application.manager;
 
+import com.example.employeebc.employee.application.manager.interfaces.IManagerJpaToManagerMapper;
 import com.example.employeebc.employee.application.manager.interfaces.IManagerRepository;
 import com.example.employeebc.employee.application.manager.mappers.ManagerJpaToDTOMapper;
 import com.example.employeebc.employee.application.manager.queries.EmployeeSkillDTOList;
-import com.example.employeebc.employee.domain.manager.DTO.ManagerDTO;
 import com.example.employeebc.employee.domain.manager.DTO.ManagerTeamDTO;
-import com.example.employeebc.employee.domain.manager.interfaces.IGetTeamBySkillIdQuery;
+import com.example.employeebc.employee.domain.manager.Manager;
+import com.example.employeebc.employee.domain.manager.ManagerTeam;
 import com.example.employeebc.employee.domain.staff.DTO.StaffDTO;
 import com.example.employeebc.employee.infrastructure.manager.ManagerJpa;
-import com.example.employeebc.employee.infrastructure.staff.StaffJpa;
 import com.example.employeebc.employee.ui.manager.IManagerQueryHandler;
 import com.example.employeebc.employee.ui.staff.IStaffQueryHandler;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -32,17 +30,6 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
     private IStaffQueryHandler staffQueryHandler;
 
     private final Logger LOG = LoggerFactory.getLogger(getClass());
-
-    @Override
-    public Iterable<ManagerJpa> findAll() {
-        return managerRepository.findAll();
-    }
-
-    @Override
-    public Optional<ManagerDTO> findByManagerId(String managerId) {
-        Optional<ManagerJpa> response = managerRepository.findById(managerId);
-        return response.flatMap(ManagerJpaToDTOMapper::convertManagerDetailsToDTO);
-    }
 
     @Override
     public List<ManagerTeamDTO> findTeamByManagerId(String managerId) {

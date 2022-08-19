@@ -20,7 +20,7 @@ public class ManagerJpaToManagerMapper implements IManagerJpaToManagerMapper  {
 
         for (ManagerTeamJpaValueObject mt : managerJpa.getTeam()) {
 
-            ManagerTeam managerTeam = ManagerTeam.managerTeamOf(mt.getStaff().getId(), mt.getManager());
+            ManagerTeam managerTeam = ManagerTeam.managerTeamOf(mt.getStaff().getId(), mt.getManager(), new FullName(mt.getFullname_firstname(), mt.getFullname_surname()));
             manager.addTeamMember(managerTeam);
 
         }

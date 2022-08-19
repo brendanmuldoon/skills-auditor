@@ -23,6 +23,8 @@ CREATE TABLE manager_team(
     id int AUTO_INCREMENT PRIMARY KEY,
     staff_id VARCHAR NOT NULL,
     manager_id VARCHAR NOT NULL,
+    fullname_firstName VARCHAR NOT NULL,
+    fullname_surname VARCHAR NOT NULL,
     FOREIGN KEY (staff_id) REFERENCES employee(id),
     FOREIGN KEY (manager_id) REFERENCES employee(id)
 );
