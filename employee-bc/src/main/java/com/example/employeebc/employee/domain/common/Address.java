@@ -17,6 +17,10 @@ public class Address extends ValueObject {
         setPostcode(postcode);
     }
 
+    public Address(Address address) {
+        this(address.houseNumber, address.streetName, address.postcode);
+    }
+
     private void setPostcode(String postcode) {
         assertArgumentNotEmpty(postcode, POSTCODE_ERROR_MSG_EMPTY);
         this.postcode = postcode;
