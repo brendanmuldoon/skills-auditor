@@ -2,11 +2,12 @@ package com.example.employeebc.employee.domain.manager;
 
 import com.example.employeebc.employee.domain.common.FullName;
 import com.example.employeebc.employee.domain.common.IdentifiedValueObject;
+import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter
 @ToString
+@Getter
 public class ManagerTeam extends IdentifiedValueObject {
 
     private String staffId;
@@ -48,16 +49,4 @@ public class ManagerTeam extends IdentifiedValueObject {
 
     }
 
-
-    public String staffId() {
-        return staffId;
-    }
-
-    public String managerId() {
-        return managerId;
-    }
-
-    public FullName FullName() {
-        return fullName;
-    }
 }

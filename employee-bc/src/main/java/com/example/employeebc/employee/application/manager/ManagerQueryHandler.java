@@ -29,12 +29,19 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
 
     private IStaffQueryHandler staffQueryHandler;
 
+    private IManagerJpaToManagerMapper managerJpaToManagerMapper;
+
     private final Logger LOG = LoggerFactory.getLogger(getClass());
 
     @Override
-    public List<ManagerTeamDTO> findTeamByManagerId(String managerId) {
+    public List<ManagerTeam> findTeamByManagerId(String managerId) {
         Optional<ManagerJpa> response = managerRepository.findById(managerId);
-        return response.map(ManagerJpaToDTOMapper::convertManagerTeamToDTO).orElseGet(ArrayList::new);
+        if(response.isPresent()) {
+            Manager manager = managerJpaToManagerMapper.map(response.get());
+            return manager.retrieveTeam();
+        }
+        //return response.map(ManagerJpaToDTOMapper::convertManagerTeamToDTO).orElseGet(ArrayList::new);
+        return new ArrayList<>();
     }
 
     @Override

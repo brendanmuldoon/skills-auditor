@@ -1,7 +1,10 @@
 package com.example.employeebc.employee.domain.common;
 
+import lombok.Getter;
+
 import static com.example.employeebc.ApplicationConstants.*;
 
+@Getter
 public class FullName extends ValueObject {
 
     private String firstName;
