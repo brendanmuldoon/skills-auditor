@@ -4,7 +4,7 @@ import com.example.employeebc.employee.domain.common.AddressTests;
 import com.example.employeebc.employee.domain.common.EmployeeTests;
 import com.example.employeebc.employee.domain.common.FullNameTests;
 import com.example.employeebc.employee.domain.common.IdentityTests;
-import com.example.employeebc.employee.domain.manager.ManagerTests;
+import com.example.employeebc.employee.domain.manager.ManagerAggregateTests;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
@@ -15,7 +15,7 @@ import org.junit.platform.suite.api.Suite;
                 EmployeeTests.class,
                 FullNameTests.class,
                 IdentityTests.class,
-                ManagerTests.class
+                ManagerAggregateTests.class
         }
 )
 public class TestSuite {
