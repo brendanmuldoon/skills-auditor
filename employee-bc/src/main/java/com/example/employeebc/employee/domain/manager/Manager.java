@@ -21,6 +21,10 @@ public class Manager extends Employee { // Aggregate
 
     }
 
+    public static Manager managerOf(Employee employee) {
+        return new Manager(employee.id(), employee.fullName(), employee.address(), employee.role(), employee.securityCredentials());
+    }
+
     public List<ManagerTeam> retrieveTeam() {
         return team;
     }

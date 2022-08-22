@@ -8,15 +8,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ManagerJpaToManagerMapper implements IManagerJpaToManagerMapper  {
+
     @Override
     public Manager map(ManagerJpa managerJpa) {
-        Identity identity = new Identity(managerJpa.getId());
-        FullName fullName = new FullName(managerJpa.getFullname_firstname(), managerJpa.getFullname_surname());
-        Address address = new Address(managerJpa.getAddress_housenumber(), managerJpa.getAddress_streetname(), managerJpa.getAddress_postcode());
-        Role role = Role.valueOf(managerJpa.getRole().toUpperCase());
-        SecurityCredentials securityCredentials = new SecurityCredentials(managerJpa.getSecuritycredentials_username(), managerJpa.getSecuritycedentials_password());
 
-        Manager manager = Manager.managerOf(identity, fullName, address, role, securityCredentials);
+        Manager manager = Manager.managerOf(EmployeeJpaToEmployeeMapper.map(managerJpa.getId(),
+                managerJpa.getFullname_firstname(),
+                managerJpa.getFullname_surname(),
+                managerJpa.getAddress_housenumber(),
+                managerJpa.getAddress_streetname(),
+                managerJpa.getAddress_postcode(),
+                Role.valueOf(managerJpa.getRole().toUpperCase()),
+                managerJpa.getSecuritycredentials_username(),
+                managerJpa.getSecuritycedentials_password()));
 
         for (ManagerTeamJpaValueObject mt : managerJpa.getTeam()) {
 

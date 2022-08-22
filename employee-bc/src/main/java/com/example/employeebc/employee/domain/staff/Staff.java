@@ -20,6 +20,10 @@ public class Staff extends Employee { // Aggregate
         return new Staff(id, fullName, address, role, securityCredentials);
     }
 
+    public static Staff staffOf(Employee employee) {
+        return new Staff(employee.id(), employee.fullName(), employee.address(), employee.role(), employee.securityCredentials());
+    }
+
     public List<StaffSkill> retrieveAllSkills() {
         return skills;
     }

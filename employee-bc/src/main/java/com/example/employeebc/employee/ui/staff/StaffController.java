@@ -24,7 +24,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffDetailsCommand.getUserId())) {
             applicationService.updateStaffDetails(updateStaffDetailsCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
         }
     }
 
@@ -34,7 +34,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, addStaffSkillCommand.getUserId())) {
             applicationService.addStaffSkill(addStaffSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
         }
     }
 
@@ -44,7 +44,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, removeStaffSkillCommand.getUserId())) {
             applicationService.removeStaffSkill(removeStaffSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
         }
     }
 
@@ -54,7 +54,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffSkillCommand.getUserId())) {
             applicationService.updateStaffSkill(updateStaffSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
         }
     }
 
