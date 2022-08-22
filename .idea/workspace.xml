@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/EmployeeJpaToEmployeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/ManagerJpaToManagerMapperTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/ManagerJpaToManagerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/ManagerJpaToManagerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffJpaToStaffMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffJpaToStaffMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/StaffController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +19,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -139,7 +134,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EmployeeBcApplication">
+  <component name="RunManager" selected="JUnit.ManagerJpaToManagerMapperTests.test02">
     <configuration name="com.example.employeebc.TestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.employeebc.TestRunner" />
       <module name="employee-bc" />
@@ -149,37 +144,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddressTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="employee-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.common.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.common" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.common.AddressTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddressTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="employee-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.common.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.common" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.common.AddressTests" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,6 +159,38 @@
       <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.manager" />
       <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.manager.ManagerAggregateTests" />
       <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerJpaToManagerMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="employee-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.employeebc.employee.domain.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.manager.ManagerJpaToManagerMapperTests" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerJpaToManagerMapperTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="employee-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.employeebc.employee.domain.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.manager.ManagerJpaToManagerMapperTests" />
+      <option name="METHOD_NAME" value="test02" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -265,8 +261,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.com.example.employeebc.TestRunner" />
-      <item itemvalue="JUnit.AddressTests" />
-      <item itemvalue="JUnit.AddressTests.test01" />
+      <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test01" />
+      <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test02" />
       <item itemvalue="JUnit.ManagerAggregateTests.test01" />
       <item itemvalue="JUnit.TestSuite" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
@@ -277,11 +273,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test02" />
+        <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test01" />
         <item itemvalue="JUnit.TestSuite" />
         <item itemvalue="JUnit.ManagerAggregateTests.test01" />
         <item itemvalue="Application.com.example.employeebc.TestRunner" />
-        <item itemvalue="JUnit.AddressTests" />
-        <item itemvalue="JUnit.AddressTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +323,7 @@
       <workItem from="1660895525072" duration="10266000" />
       <workItem from="1660907111064" duration="1854000" />
       <workItem from="1660914123677" duration="9671000" />
-      <workItem from="1661152530031" duration="8395000" />
+      <workItem from="1661152530031" duration="12618000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

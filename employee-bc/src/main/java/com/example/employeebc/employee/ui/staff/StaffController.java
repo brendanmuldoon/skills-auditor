@@ -1,15 +1,15 @@
 package com.example.employeebc.employee.ui.staff;
 
 import com.example.employeebc.employee.application.manager.commands.UserDetails;
-import com.example.employeebc.employee.application.staff.commands.*;
+import com.example.employeebc.employee.application.staff.commands.AddStaffSkillCommand;
+import com.example.employeebc.employee.application.staff.commands.RemoveStaffSkillCommand;
+import com.example.employeebc.employee.application.staff.commands.UpdateStaffDetailsCommand;
+import com.example.employeebc.employee.application.staff.commands.UpdateStaffSkillCommand;
 import com.example.employeebc.employee.ui.manager.IIdentityService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
-import java.util.Optional;
 
 @RequestMapping("/staff")
 @RestController
