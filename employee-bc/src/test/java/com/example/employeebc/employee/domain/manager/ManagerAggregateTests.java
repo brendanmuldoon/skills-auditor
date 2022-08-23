@@ -1,12 +1,10 @@
 package com.example.employeebc.employee.domain.manager;
 
 import com.example.employeebc.employee.domain.common.*;
-import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ManagerAggregateTests {
 
@@ -20,7 +18,7 @@ public class ManagerAggregateTests {
     @DisplayName("When valid details are assigned to a Manager then a Manager object is created")
     void test01() {
         assertDoesNotThrow(() -> {
-            Assert.assertNotNull(Manager.managerOf(VALID_ID, VALID_FULLNAME, VALID_ADDRESS, VALID_ROLE, VALID_SECURITY_CREDENTIALS));
+            assertNotNull(Manager.managerOf(VALID_ID, VALID_FULLNAME, VALID_ADDRESS, VALID_ROLE, VALID_SECURITY_CREDENTIALS));
         });
     }
 

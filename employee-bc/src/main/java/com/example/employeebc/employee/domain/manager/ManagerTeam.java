@@ -25,6 +25,10 @@ public class ManagerTeam extends IdentifiedValueObject {
         return new ManagerTeam(staffId, managerId, fullName);
     }
 
+    public ManagerTeam(ManagerTeam managerTeam) {
+        this(managerTeam.getStaffId(), managerTeam.getManagerId(), managerTeam.fullName);
+    }
+
     public void setStaffId(String staffId) {
         assertArgumentNotEmpty(staffId, "Staff ID cannot be empty");
         this.staffId=staffId;
