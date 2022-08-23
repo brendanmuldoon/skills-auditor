@@ -8,7 +8,9 @@ import org.springframework.stereotype.Component;
 public class ManagerToManagerJpaMapper implements IManagerToManagerJpaMapper {
     @Override
     public ManagerJpa map(Manager manager) {
-        ManagerJpa managerJpa = ManagerJpa.managerJpaOf(
+
+
+        return ManagerJpa.managerJpaOf(
                 manager.id().id(),
                 manager.fullName().firstName(),
                 manager.fullName().surname(),
@@ -19,8 +21,5 @@ public class ManagerToManagerJpaMapper implements IManagerToManagerJpaMapper {
                 manager.securityCredentials().username(),
                 manager.securityCredentials().password()
         );
-
-
-        return managerJpa;
     }
 }
