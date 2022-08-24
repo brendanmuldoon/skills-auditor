@@ -30,4 +30,17 @@ public class ManagerDTO extends EmployeeDTO {
         super(id, fullname_firstname, fullname_surname, houseNumber, streetName, postcode, role, username, password);
         this.team = team;
     }
+
+    public ManagerDTO(ManagerDTO managerDTO) {
+        this(managerDTO.getId(),
+                managerDTO.getFullname_firstname(),
+                managerDTO.getFullname_surname(),
+                managerDTO.getHouseNumber(),
+                managerDTO.getStreetName(),
+                managerDTO.getPostcode(),
+                managerDTO.getRole(),
+                managerDTO.getUsername(),
+                managerDTO.getPassword(),
+                managerDTO.getTeam());
+    }
 }

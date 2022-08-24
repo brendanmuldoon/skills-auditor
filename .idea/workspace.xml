@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/ManagerToManagerJpaMapperTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/ManagerToManagerJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/ManagerToManagerJpaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +133,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestSuite">
+  <component name="RunManager" selected="JUnit.ManagerDTOTests">
     <configuration name="ManagerAggregateTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
@@ -152,18 +150,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerJpaToManagerMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerDTOTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.manager.*" />
+          <option name="PATTERN" value="com.example.employeebc.employee.domain.manager.DTO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.manager.ManagerJpaToManagerMapperTests" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.manager.DTO" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.manager.DTO.ManagerDTOTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -264,8 +261,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ManagerDTOTests" />
       <item itemvalue="JUnit.ManagerTeamTests.test01" />
-      <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test01" />
       <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test02" />
       <item itemvalue="JUnit.ManagerAggregateTests.test01" />
       <item itemvalue="JUnit.TestSuite" />
@@ -277,11 +274,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManagerDTOTests" />
         <item itemvalue="JUnit.TestSuite" />
         <item itemvalue="JUnit.ManagerTeamTests.test01" />
         <item itemvalue="JUnit.ManagerAggregateTests.test01" />
         <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test02" />
-        <item itemvalue="JUnit.ManagerJpaToManagerMapperTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +325,8 @@
       <workItem from="1660907111064" duration="1854000" />
       <workItem from="1660914123677" duration="9671000" />
       <workItem from="1661152530031" duration="13325000" />
-      <workItem from="1661263949403" duration="1570000" />
+      <workItem from="1661263949403" duration="2227000" />
+      <workItem from="1661355358596" duration="204000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
