@@ -18,9 +18,12 @@ public class ExpirationDate extends ValueObject {
     public ExpirationDate(){}
 
     public ExpirationDate(int month, int year) {
-        //checkIfSkillHasAlreadyExpired(month, year);
         setExpiryMonth(month);
         setExpiryYear(year);
+    }
+
+    public ExpirationDate(ExpirationDate expirationDate) {
+        this(expirationDate.getMonth(), expirationDate.getYear());
     }
 
     private void setExpiryYear(int year) {
@@ -38,15 +41,6 @@ public class ExpirationDate extends ValueObject {
         }
 
         this.month = month;
-    }
-
-
-
-    private void checkIfSkillHasAlreadyExpired(int month, int year) {
-        if(year<= LocalDate.now().getYear()
-                && month < LocalDate.now().getMonthValue()) {
-            throw new IllegalArgumentException(SKILL_EXPIRY_ERROR_MSG);
-        }
     }
 
     public boolean equals(Object o){
