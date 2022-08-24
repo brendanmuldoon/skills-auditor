@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/EmployeeDTOTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTOTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/EmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,8 +120,8 @@
       <recent name="com.example.skillsauditor.skill.application.category" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.example.employeebc.employee.domain.common" />
       <recent name="com.example.employeebc.employee.domain.manager.DTO" />
+      <recent name="com.example.employeebc.employee.domain.common" />
       <recent name="com.example.employeebc.employee.domain.manager" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -136,7 +136,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeDTOTests">
+  <component name="RunManager" selected="JUnit.TestSuite">
     <configuration name="EmployeeDTOTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
@@ -276,9 +276,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSuite" />
         <item itemvalue="JUnit.EmployeeDTOTests" />
         <item itemvalue="JUnit.ManagerDTOTests" />
-        <item itemvalue="JUnit.TestSuite" />
         <item itemvalue="JUnit.ManagerTeamTests.test01" />
         <item itemvalue="JUnit.ManagerAggregateTests.test01" />
       </list>
@@ -328,7 +328,7 @@
       <workItem from="1660914123677" duration="9671000" />
       <workItem from="1661152530031" duration="13325000" />
       <workItem from="1661263949403" duration="2227000" />
-      <workItem from="1661355358596" duration="708000" />
+      <workItem from="1661355358596" duration="1156000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

@@ -15,4 +15,9 @@ public class ManagerTeamDTO {
     private String staffFirstName;
     private String staffSurname;
     private List<StaffSkillDTO> skills;
+
+    public ManagerTeamDTO(ManagerTeamDTO managerTeamDTO) {
+        this(managerTeamDTO.getStaffId(), managerTeamDTO.getStaffFirstName(),
+                managerTeamDTO.getStaffSurname(), managerTeamDTO.getSkills());
+    }
 }

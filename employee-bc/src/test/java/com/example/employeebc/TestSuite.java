@@ -2,6 +2,7 @@ package com.example.employeebc;
 
 import com.example.employeebc.employee.domain.common.*;
 import com.example.employeebc.employee.domain.manager.DTO.ManagerDTOTests;
+import com.example.employeebc.employee.domain.manager.DTO.ManagerTeamDTOTests;
 import com.example.employeebc.employee.domain.manager.ManagerAggregateTests;
 import com.example.employeebc.employee.domain.manager.ManagerTeamTests;
 import com.example.employeebc.employee.domain.manager.ManagerToManagerJpaMapperTests;
@@ -19,7 +20,8 @@ import org.junit.platform.suite.api.Suite;
                 ManagerTeamTests.class,
                 ManagerToManagerJpaMapperTests.class,
                 ManagerDTOTests.class,
-                EmployeeDTOTests.class
+                EmployeeDTOTests.class,
+                ManagerTeamDTOTests.class
         }
 )
 public class TestSuite {
