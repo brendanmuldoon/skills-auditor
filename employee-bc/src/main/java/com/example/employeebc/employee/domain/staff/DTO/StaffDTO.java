@@ -27,4 +27,10 @@ public class StaffDTO extends EmployeeDTO {
         this.skills = skills;
     }
 
+    public StaffDTO(StaffDTO staffDTO) {
+        this(staffDTO.getId(), staffDTO.getFullname_firstname(),
+                staffDTO.getFullname_surname(), staffDTO.getHouseNumber(),
+                staffDTO.getStreetName(), staffDTO.getPostcode(),
+                staffDTO.getRole(), staffDTO.getUsername(), staffDTO.getPassword(), staffDTO.getSkills());
+    }
 }
