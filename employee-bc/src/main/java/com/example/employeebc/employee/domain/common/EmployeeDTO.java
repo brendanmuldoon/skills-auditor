@@ -40,4 +40,10 @@ public class EmployeeDTO { // base DTO for staff and manager
         this.username = username;
         this.password = password;
     }
+
+    public EmployeeDTO(EmployeeDTO employeeDTO) {
+        this(employeeDTO.getId(), employeeDTO.getFullname_firstname(), employeeDTO.getFullname_surname(),
+                employeeDTO.getHouseNumber(), employeeDTO.getStreetName(), employeeDTO.getPostcode(),
+                employeeDTO.getRole(), employeeDTO.getPassword(), employeeDTO.getPassword());
+    }
 }
