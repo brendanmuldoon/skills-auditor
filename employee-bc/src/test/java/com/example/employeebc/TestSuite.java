@@ -7,6 +7,7 @@ import com.example.employeebc.employee.domain.manager.ManagerAggregateTests;
 import com.example.employeebc.employee.domain.manager.ManagerTeamTests;
 import com.example.employeebc.employee.domain.manager.ManagerToManagerJpaMapperTests;
 import com.example.employeebc.employee.domain.staff.DTO.StaffDTOTests;
+import com.example.employeebc.employee.domain.staff.DTO.StaffSkillDTOTests;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
@@ -23,7 +24,8 @@ import org.junit.platform.suite.api.Suite;
                 ManagerDTOTests.class,
                 EmployeeDTOTests.class,
                 ManagerTeamDTOTests.class,
-                StaffDTOTests.class
+                StaffDTOTests.class,
+                StaffSkillDTOTests.class
         }
 )
 public class TestSuite {

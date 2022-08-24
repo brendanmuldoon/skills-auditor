@@ -13,4 +13,8 @@ public class StaffSkillDTO {
     private String skillId;
     private StrengthOfSkill strengthOfSkill;
     private ExpirationDate expiry;
+
+    public StaffSkillDTO(StaffSkillDTO staffSkillDTO) {
+        this(staffSkillDTO.getSkillId(), staffSkillDTO.getStrengthOfSkill(), staffSkillDTO.getExpiry());
+    }
 }

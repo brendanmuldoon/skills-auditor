@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTOTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTOTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +135,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StaffDTOTests">
+  <component name="RunManager" selected="JUnit.StaffSkillDTOTests">
     <configuration name="EmployeeDTOTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
@@ -168,22 +166,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerTeamTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="employee-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.manager.ManagerTeamTests" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StaffDTOTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
@@ -194,6 +176,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff.DTO" />
       <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.DTO.StaffDTOTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaffSkillDTOTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="employee-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.employeebc.employee.domain.staff.DTO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff.DTO" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.DTO.StaffSkillDTOTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -266,7 +263,7 @@
       <item itemvalue="JUnit.EmployeeDTOTests" />
       <item itemvalue="JUnit.ManagerDTOTests" />
       <item itemvalue="JUnit.StaffDTOTests" />
-      <item itemvalue="JUnit.ManagerTeamTests.test01" />
+      <item itemvalue="JUnit.StaffSkillDTOTests" />
       <item itemvalue="JUnit.TestSuite" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
@@ -276,11 +273,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StaffSkillDTOTests" />
         <item itemvalue="JUnit.StaffDTOTests" />
         <item itemvalue="JUnit.TestSuite" />
         <item itemvalue="JUnit.EmployeeDTOTests" />
         <item itemvalue="JUnit.ManagerDTOTests" />
-        <item itemvalue="JUnit.ManagerTeamTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +325,7 @@
       <workItem from="1660914123677" duration="9671000" />
       <workItem from="1661152530031" duration="13325000" />
       <workItem from="1661263949403" duration="2227000" />
-      <workItem from="1661355358596" duration="1626000" />
+      <workItem from="1661355358596" duration="1941000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
