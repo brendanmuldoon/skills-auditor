@@ -1,5 +1,6 @@
 package com.example.employeebc;
 
+import com.example.employeebc.employee.application.manager.ManagerApplicationServiceTests;
 import com.example.employeebc.employee.application.manager.mappers.ManagerJpaToDTOMapperTests;
 import com.example.employeebc.employee.domain.common.*;
 import com.example.employeebc.employee.domain.manager.DTO.ManagerDTOTests;
@@ -29,7 +30,8 @@ import org.junit.platform.suite.api.Suite;
                 StaffDTOTests.class,
                 StaffSkillDTOTests.class,
                 ExpirationDateTests.class,
-                ManagerJpaToDTOMapperTests.class
+                ManagerJpaToDTOMapperTests.class,
+                ManagerApplicationServiceTests.class
         }
 )
 public class TestSuite {

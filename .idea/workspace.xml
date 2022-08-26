@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/queries/EmployeeSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeSkillDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/queries/EmployeeSkillDTOList.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeSkillDTOList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffQueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/mappers/StaffJpaToDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/mappers/StaffJpaToDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/ManagerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/ManagerTeamDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/dto/StaffDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/dto/StaffSkillDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerQueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/IStaffQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/IStaffQueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapperTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/EmployeeDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/EmployeeDTOTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTOTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTOTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTOTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTOTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/ManagerApplicationServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,11 +120,11 @@
       <recent name="com.example.skillsauditor.employee.application.manager.commands" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.employeebc.employee.application.manager" />
       <recent name="com.example.employeebc.employee.application.manager.mappers" />
       <recent name="com.example.employeebc.employee.domain.staff" />
       <recent name="com.example.employeebc.employee.domain.staff.DTO" />
       <recent name="com.example.employeebc.employee.domain.manager.DTO" />
-      <recent name="com.example.employeebc.employee.domain.common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.skillsauditor.skill.domain.common" />
@@ -155,65 +139,65 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TestSuite">
-    <configuration name="ExpirationDateTests.test02 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerApplicationServiceTests.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.staff.*" />
+          <option name="PATTERN" value="com.example.employeebc.employee.application.manager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.ExpirationDateTests" />
-      <option name="METHOD_NAME" value="test02(int)" />
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.manager.ManagerApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test06" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpirationDateTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerApplicationServiceTests.test07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.staff.*" />
+          <option name="PATTERN" value="com.example.employeebc.employee.application.manager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.ExpirationDateTests" />
-      <option name="METHOD_NAME" value="test02(java.lang.String)" />
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.manager.ManagerApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test07" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpirationDateTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerApplicationServiceTests.test08" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.staff.*" />
+          <option name="PATTERN" value="com.example.employeebc.employee.application.manager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.ExpirationDateTests" />
-      <option name="METHOD_NAME" value="test03" />
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.manager.ManagerApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test08" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerJpaToDTOMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerApplicationServiceTests.test09" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.application.manager.mappers.*" />
+          <option name="PATTERN" value="com.example.employeebc.employee.application.manager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.manager.mappers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.manager.mappers.ManagerJpaToDTOMapperTests" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.manager.ManagerApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test09" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -283,10 +267,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ManagerJpaToDTOMapperTests.test01" />
-      <item itemvalue="JUnit.ExpirationDateTests.test02" />
-      <item itemvalue="JUnit.ExpirationDateTests.test02 (1)" />
-      <item itemvalue="JUnit.ExpirationDateTests.test03" />
+      <item itemvalue="JUnit.ManagerApplicationServiceTests.test06" />
+      <item itemvalue="JUnit.ManagerApplicationServiceTests.test07" />
+      <item itemvalue="JUnit.ManagerApplicationServiceTests.test08" />
+      <item itemvalue="JUnit.ManagerApplicationServiceTests.test09" />
       <item itemvalue="JUnit.TestSuite" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
@@ -297,10 +281,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestSuite" />
-        <item itemvalue="JUnit.ManagerJpaToDTOMapperTests.test01" />
-        <item itemvalue="JUnit.ExpirationDateTests.test03" />
-        <item itemvalue="JUnit.ExpirationDateTests.test02 (1)" />
-        <item itemvalue="JUnit.ExpirationDateTests.test02" />
+        <item itemvalue="JUnit.ManagerApplicationServiceTests.test09" />
+        <item itemvalue="JUnit.ManagerApplicationServiceTests.test08" />
+        <item itemvalue="JUnit.ManagerApplicationServiceTests.test07" />
+        <item itemvalue="JUnit.ManagerApplicationServiceTests.test06" />
       </list>
     </recent_temporary>
   </component>
@@ -350,7 +334,7 @@
       <workItem from="1661263949403" duration="2227000" />
       <workItem from="1661355358596" duration="3128000" />
       <workItem from="1661433727465" duration="4796000" />
-      <workItem from="1661509505429" duration="3162000" />
+      <workItem from="1661509505429" duration="6744000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

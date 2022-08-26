@@ -44,21 +44,9 @@ public class ManagerApplicationService implements IManagerApplicationService {
 
     private final Logger LOG = LoggerFactory.getLogger(getClass());
 
-    private ApplicationEventPublisher eventPublisher;
-
     private JmsTemplate jmsTemplate;
 
     private ObjectMapper objectMapper;
-
-
-
-    private void manageDomainEvents(List<ApplicationEvent> events) {
-        for (ApplicationEvent event : events){
-            LOG.info("event " + event);
-            eventPublisher.publishEvent(event);
-            //eventStoreService.append(events);
-        }
-    }
 
     @Override
     public void addStaffToManagerTeam(String managerId, String staffId) {
