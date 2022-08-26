@@ -1,5 +1,6 @@
-package com.example.employeebc.employee.domain.common;
+package com.example.employeebc.employee.application.manager.dto;
 
+import com.example.employeebc.employee.domain.common.Role;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

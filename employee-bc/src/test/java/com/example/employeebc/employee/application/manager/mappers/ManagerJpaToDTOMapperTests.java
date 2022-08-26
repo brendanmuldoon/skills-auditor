@@ -2,7 +2,7 @@ package com.example.employeebc.employee.application.manager.mappers;
 
 import com.example.employeebc.employee.domain.common.Identity;
 import com.example.employeebc.employee.domain.common.UniqueIDFactory;
-import com.example.employeebc.employee.domain.manager.DTO.ManagerTeamDTO;
+import com.example.employeebc.employee.application.manager.dto.ManagerTeamDTO;
 import com.example.employeebc.employee.infrastructure.manager.ManagerJpa;
 import com.example.employeebc.employee.infrastructure.manager.ManagerTeamJpaValueObject;
 import com.example.employeebc.employee.infrastructure.staff.StaffJpa;

@@ -1,5 +1,6 @@
-package com.example.employeebc.employee.application.manager.queries;
+package com.example.employeebc.employee.application.manager.dto;
 
+import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

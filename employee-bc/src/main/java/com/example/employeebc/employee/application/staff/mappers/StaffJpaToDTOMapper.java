@@ -1,8 +1,8 @@
 package com.example.employeebc.employee.application.staff.mappers;
 
 import com.example.employeebc.employee.domain.common.Role;
-import com.example.employeebc.employee.domain.staff.DTO.StaffDTO;
-import com.example.employeebc.employee.domain.staff.DTO.StaffSkillDTO;
+import com.example.employeebc.employee.application.staff.dto.StaffDTO;
+import com.example.employeebc.employee.application.staff.dto.StaffSkillDTO;
 import com.example.employeebc.employee.domain.staff.ExpirationDate;
 import com.example.employeebc.employee.domain.staff.StrengthOfSkill;
 import com.example.employeebc.employee.domain.staff.interfaces.IStaffJpa;

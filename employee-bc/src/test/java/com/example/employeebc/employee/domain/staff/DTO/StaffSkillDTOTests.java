@@ -1,5 +1,6 @@
 package com.example.employeebc.employee.domain.staff.DTO;
 
+import com.example.employeebc.employee.application.staff.dto.StaffSkillDTO;
 import com.example.employeebc.employee.domain.staff.ExpirationDate;
 import com.example.employeebc.employee.domain.staff.StrengthOfSkill;
 import org.junit.jupiter.api.DisplayName;

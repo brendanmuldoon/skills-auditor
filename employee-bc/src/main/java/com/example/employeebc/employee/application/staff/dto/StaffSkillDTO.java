@@ -1,4 +1,4 @@
-package com.example.employeebc.employee.domain.staff.DTO;
+package com.example.employeebc.employee.application.staff.dto;
 
 import com.example.employeebc.employee.domain.staff.ExpirationDate;
 import com.example.employeebc.employee.domain.staff.StrengthOfSkill;

@@ -1,7 +1,7 @@
 package com.example.employeebc.employee.ui.manager;
 
-import com.example.employeebc.employee.application.manager.queries.EmployeeSkillDTOList;
-import com.example.employeebc.employee.domain.manager.DTO.ManagerTeamDTO;
+import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTOList;
+import com.example.employeebc.employee.application.manager.dto.ManagerTeamDTO;
 import com.example.employeebc.employee.domain.manager.ManagerTeam;
 
 import java.util.List;

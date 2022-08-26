@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapperTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/queries/EmployeeSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeSkillDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/queries/EmployeeSkillDTOList.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeSkillDTOList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/mappers/StaffJpaToDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/mappers/StaffJpaToDTOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/common/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/ManagerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/ManagerTeamDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/dto/StaffDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/dto/StaffSkillDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/IManagerQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/IStaffQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/IStaffQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/EmployeeDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/common/EmployeeDTOTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerDTOTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/manager/DTO/ManagerTeamDTOTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffDTOTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/DTO/StaffSkillDTOTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,11 +129,11 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.employeebc.employee.application.staff.dto" />
+      <recent name="com.example.employeebc.employee.application.manager.dto" />
       <recent name="com.example.identitybc.service" />
       <recent name="com.example.skillsauditor.employee.domain.manager.interfaces" />
       <recent name="com.example.skillsauditor.employee.application.manager.commands" />
-      <recent name="com.example.skillsauditor.skill.infrastructure.skill" />
-      <recent name="com.example.skillsauditor.skill.application.category" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.employeebc.employee.application.manager.mappers" />
@@ -335,7 +350,7 @@
       <workItem from="1661263949403" duration="2227000" />
       <workItem from="1661355358596" duration="3128000" />
       <workItem from="1661433727465" duration="4796000" />
-      <workItem from="1661509505429" duration="2224000" />
+      <workItem from="1661509505429" duration="3162000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

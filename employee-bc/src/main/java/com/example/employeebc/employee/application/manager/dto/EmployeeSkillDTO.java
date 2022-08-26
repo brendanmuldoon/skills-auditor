@@ -1,4 +1,4 @@
-package com.example.employeebc.employee.application.manager.queries;
+package com.example.employeebc.employee.application.manager.dto;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

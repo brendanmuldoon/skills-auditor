@@ -1,6 +1,6 @@
-package com.example.employeebc.employee.domain.manager.DTO;
+package com.example.employeebc.employee.application.manager.dto;
 
-import com.example.employeebc.employee.domain.staff.DTO.StaffSkillDTO;
+import com.example.employeebc.employee.application.staff.dto.StaffSkillDTO;
 import lombok.*;
 
 import java.util.List;

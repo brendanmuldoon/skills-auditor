@@ -1,6 +1,6 @@
-package com.example.employeebc.employee.domain.staff.DTO;
+package com.example.employeebc.employee.application.staff.dto;
 
-import com.example.employeebc.employee.domain.common.EmployeeDTO;
+import com.example.employeebc.employee.application.manager.dto.EmployeeDTO;
 import com.example.employeebc.employee.domain.common.Role;
 import lombok.*;
 

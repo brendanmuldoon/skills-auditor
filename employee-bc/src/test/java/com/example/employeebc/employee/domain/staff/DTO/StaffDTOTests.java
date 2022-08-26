@@ -1,5 +1,6 @@
 package com.example.employeebc.employee.domain.staff.DTO;
 
+import com.example.employeebc.employee.application.staff.dto.StaffDTO;
 import com.example.employeebc.employee.domain.common.Role;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

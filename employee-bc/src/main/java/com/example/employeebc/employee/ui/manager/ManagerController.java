@@ -1,7 +1,7 @@
 package com.example.employeebc.employee.ui.manager;
 
 import com.example.employeebc.employee.application.manager.commands.*;
-import com.example.employeebc.employee.application.manager.queries.EmployeeSkillDTOList;
+import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTOList;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

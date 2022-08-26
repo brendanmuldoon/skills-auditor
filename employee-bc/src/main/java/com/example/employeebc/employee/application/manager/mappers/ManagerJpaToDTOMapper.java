@@ -1,9 +1,9 @@
 package com.example.employeebc.employee.application.manager.mappers;
 
 import com.example.employeebc.employee.application.staff.mappers.StaffJpaToDTOMapper;
-import com.example.employeebc.employee.domain.manager.DTO.ManagerTeamDTO;
+import com.example.employeebc.employee.application.manager.dto.ManagerTeamDTO;
 import com.example.employeebc.employee.domain.manager.interfaces.IManagerJpa;
-import com.example.employeebc.employee.domain.staff.DTO.StaffSkillDTO;
+import com.example.employeebc.employee.application.staff.dto.StaffSkillDTO;
 import com.example.employeebc.employee.infrastructure.manager.ManagerTeamJpaValueObject;
 
 import java.util.ArrayList;
