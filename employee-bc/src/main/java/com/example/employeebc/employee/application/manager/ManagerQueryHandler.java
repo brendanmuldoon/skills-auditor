@@ -31,6 +31,8 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
 
     private IManagerJpaToManagerMapper managerJpaToManagerMapper;
 
+    private RestTemplate restTemplate;
+
     private final Logger LOG = LoggerFactory.getLogger(getClass());
 
     @Override
@@ -40,7 +42,6 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
             Manager manager = managerJpaToManagerMapper.map(response.get());
             return manager.retrieveTeam();
         }
-        //return response.map(ManagerJpaToDTOMapper::convertManagerTeamToDTO).orElseGet(ArrayList::new);
         return new ArrayList<>();
     }
 
@@ -66,7 +67,6 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
 
 
         String URL = String.format("http://localhost:8081/skill/findAllSkillsByCategory/%s", categoryId);
-        RestTemplate restTemplate = new RestTemplate();
         EmployeeSkillDTOList myRequiredData = new EmployeeSkillDTOList();
 
         try {
