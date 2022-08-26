@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/domain/staff/ExpirationDateTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapperTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/ExpirationDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/ExpirationDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/mappers/ManagerJpaToDTOMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,11 +121,11 @@
       <recent name="com.example.skillsauditor.skill.application.category" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.employeebc.employee.application.manager.mappers" />
       <recent name="com.example.employeebc.employee.domain.staff" />
       <recent name="com.example.employeebc.employee.domain.staff.DTO" />
       <recent name="com.example.employeebc.employee.domain.manager.DTO" />
       <recent name="com.example.employeebc.employee.domain.common" />
-      <recent name="com.example.employeebc.employee.domain.manager" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.skillsauditor.skill.domain.common" />
@@ -139,22 +140,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TestSuite">
-    <configuration name="ExpirationDateTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="employee-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.domain.staff.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.ExpirationDateTests" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ExpirationDateTests.test02 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
@@ -198,6 +183,22 @@
       <option name="PACKAGE_NAME" value="com.example.employeebc.employee.domain.staff" />
       <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.domain.staff.ExpirationDateTests" />
       <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerJpaToDTOMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="employee-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.employeebc.employee.application.manager.mappers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.manager.mappers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.manager.mappers.ManagerJpaToDTOMapperTests" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -267,7 +268,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ExpirationDateTests.test01" />
+      <item itemvalue="JUnit.ManagerJpaToDTOMapperTests.test01" />
       <item itemvalue="JUnit.ExpirationDateTests.test02" />
       <item itemvalue="JUnit.ExpirationDateTests.test02 (1)" />
       <item itemvalue="JUnit.ExpirationDateTests.test03" />
@@ -281,10 +282,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestSuite" />
+        <item itemvalue="JUnit.ManagerJpaToDTOMapperTests.test01" />
         <item itemvalue="JUnit.ExpirationDateTests.test03" />
         <item itemvalue="JUnit.ExpirationDateTests.test02 (1)" />
         <item itemvalue="JUnit.ExpirationDateTests.test02" />
-        <item itemvalue="JUnit.ExpirationDateTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -332,7 +333,9 @@
       <workItem from="1660914123677" duration="9671000" />
       <workItem from="1661152530031" duration="13325000" />
       <workItem from="1661263949403" duration="2227000" />
-      <workItem from="1661355358596" duration="3042000" />
+      <workItem from="1661355358596" duration="3128000" />
+      <workItem from="1661433727465" duration="4796000" />
+      <workItem from="1661509505429" duration="2224000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

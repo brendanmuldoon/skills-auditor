@@ -10,12 +10,12 @@ import org.springframework.web.client.RestTemplate;
 public class IdentityService implements IIdentityService {
 
     public String validateAndGetRole(UserDetails command) {
-        String URL = "http://localhost:8082/validateRole"; //Assuming identity context is running on 8902
+        String URL = "http://localhost:8082/validateRole";
         return getResponseFromIdentityContext(command, URL);
     }
 
     public String getID(UserDetails command) {
-        String URL = "http://localhost:8082/id"; //Assuming identity context is running on 8902
+        String URL = "http://localhost:8082/id";
         return getResponseFromIdentityContext(command, URL);
     }
 
