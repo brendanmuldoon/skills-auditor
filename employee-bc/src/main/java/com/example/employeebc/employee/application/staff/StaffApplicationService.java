@@ -1,12 +1,16 @@
 package com.example.employeebc.employee.application.staff;
 
 import com.example.employeebc.employee.application.manager.events.EmployeeDeleteSkillEvent;
-import com.example.employeebc.employee.application.staff.interfaces.*;
-import com.example.employeebc.employee.domain.common.*;
+import com.example.employeebc.employee.application.staff.interfaces.IStaffJpaToStaffMapper;
+import com.example.employeebc.employee.application.staff.interfaces.IStaffRepository;
+import com.example.employeebc.employee.application.staff.interfaces.IStaffToStaffJpaMapper;
 import com.example.employeebc.employee.domain.staff.Staff;
 import com.example.employeebc.employee.domain.staff.StaffSkill;
 import com.example.employeebc.employee.domain.staff.StrengthOfSkill;
-import com.example.employeebc.employee.domain.staff.interfaces.*;
+import com.example.employeebc.employee.domain.staff.interfaces.IAddStaffSkillCommand;
+import com.example.employeebc.employee.domain.staff.interfaces.IRemoveStaffSkillCommand;
+import com.example.employeebc.employee.domain.staff.interfaces.IUpdateStaffDetailsCommand;
+import com.example.employeebc.employee.domain.staff.interfaces.IUpdateStaffSkillCommand;
 import com.example.employeebc.employee.infrastructure.staff.StaffJpa;
 import com.example.employeebc.employee.ui.staff.IStaffApplicationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -88,16 +92,6 @@ public class StaffApplicationService implements IStaffApplicationService {
     }
 
     @Override
-    public void deleteStaff(IDeleteStaffCommand deleteStaffCommand) {
-        Optional<StaffJpa> staffJpa = staffRepository.findById(deleteStaffCommand.getStaffId());
-        if(staffJpa.isPresent()) {
-            staffRepository.delete(staffJpa.get());
-        } else {
-            throw new IllegalArgumentException("Staff id is not recognised");
-        }
-    }
-
-    @Override
     public void updateStaffSkill(IUpdateStaffSkillCommand updateStaffSkillCommand) {
         Optional<StaffJpa> staffJpa = staffRepository.findById(updateStaffSkillCommand.getStaffId());
         if(staffJpa.isPresent()) {
@@ -110,19 +104,9 @@ public class StaffApplicationService implements IStaffApplicationService {
         }
     }
 
-    @Override
-    public void createStaff(ICreateStaffCommand createStaffCommand) {
-        Identity identity = UniqueIDFactory.createID();
-        FullName fullName = new FullName(createStaffCommand.getFirstName(), createStaffCommand.getSurname());
-        Address address = new Address(createStaffCommand.getHouseNumber(), createStaffCommand.getStreetName(), createStaffCommand.getPostcode());
-        Role role = Role.valueOf(createStaffCommand.getRole().toUpperCase());
-        SecurityCredentials securityCredentials = new SecurityCredentials(createStaffCommand.getUsername(), createStaffCommand.getPassword());
-        Staff staff = Staff.staffOf(identity, fullName, address, role, securityCredentials);
-        staffRepository.save(staffToStaffJpaMapper.map(staff));
-    }
 
     @JmsListener(destination = "EMPLOYEE.DELETE.SKILL.QUEUE")
-    public void deleteSkillListener(Message message) {
+    public void deleteSkillListener(Message message) { // validation method to ensure skill is not deleted if it is in use
 
         LOG.info("Received message from EMPLOYEE.DELETE.SKILL.QUEUE");
 

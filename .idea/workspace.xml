@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/manager/ManagerQueryHandlerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeSkillDTOList.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/dto/EmployeeSkillDTOList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/IStaffApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/staff/IStaffApplicationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +333,7 @@
       <workItem from="1661263949403" duration="2227000" />
       <workItem from="1661355358596" duration="3128000" />
       <workItem from="1661433727465" duration="4796000" />
-      <workItem from="1661509505429" duration="13765000" />
+      <workItem from="1661509505429" duration="14102000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
