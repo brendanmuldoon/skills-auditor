@@ -27,11 +27,6 @@ public class StaffRepository implements IStaffRepository {
     }
 
     @Override
-    public void delete(StaffJpa staffJpa) {
-        repository.delete(staffJpa);
-    }
-
-    @Override
     public Iterable<StaffJpa> findAllWithExpiredSkills() {
         return repository.findAllWithExpiredSkills();
     }

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/infrastructure/manager/ManagerRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/infrastructure/staff/StaffRepositoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/interfaces/IStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/interfaces/IStaffRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,11 +121,11 @@
       <recent name="com.example.skillsauditor.employee.application.manager.commands" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.employeebc.employee.infrastructure.staff" />
       <recent name="com.example.employeebc.employee.infrastructure.manager" />
       <recent name="com.example.employeebc.employee.application.staff" />
       <recent name="com.example.employeebc.employee.application.staff.mappers" />
       <recent name="com.example.employeebc.employee.application.manager" />
-      <recent name="com.example.employeebc.employee.application.manager.mappers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.skillsauditor.skill.domain.common" />
@@ -138,22 +140,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TestSuite">
-    <configuration name="ManagerRepositoryTests.test019" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="employee-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.infrastructure.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.infrastructure.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.infrastructure.manager.ManagerRepositoryTests" />
-      <option name="METHOD_NAME" value="test019" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ManagerRepositoryTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
@@ -186,17 +172,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StaffApplicationServiceTests.test09" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StaffRepositoryTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employee-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.employeebc.employee.application.staff.*" />
+          <option name="PATTERN" value="com.example.employeebc.employee.infrastructure.staff.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.application.staff" />
-      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.application.staff.StaffApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test09" />
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.infrastructure.staff" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.infrastructure.staff.StaffRepositoryTests" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaffRepositoryTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="employee-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.employeebc.employee.infrastructure.staff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.employeebc.employee.infrastructure.staff" />
+      <option name="MAIN_CLASS_NAME" value="com.example.employeebc.employee.infrastructure.staff.StaffRepositoryTests" />
+      <option name="METHOD_NAME" value="test03" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -266,10 +268,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ManagerRepositoryTests.test019" />
       <item itemvalue="JUnit.ManagerRepositoryTests.test02" />
       <item itemvalue="JUnit.ManagerRepositoryTests.test03" />
-      <item itemvalue="JUnit.StaffApplicationServiceTests.test09" />
+      <item itemvalue="JUnit.StaffRepositoryTests.test02" />
+      <item itemvalue="JUnit.StaffRepositoryTests.test03" />
       <item itemvalue="JUnit.TestSuite" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
@@ -280,10 +282,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestSuite" />
+        <item itemvalue="JUnit.StaffRepositoryTests.test03" />
+        <item itemvalue="JUnit.StaffRepositoryTests.test02" />
         <item itemvalue="JUnit.ManagerRepositoryTests.test03" />
         <item itemvalue="JUnit.ManagerRepositoryTests.test02" />
-        <item itemvalue="JUnit.ManagerRepositoryTests.test019" />
-        <item itemvalue="JUnit.StaffApplicationServiceTests.test09" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +336,7 @@
       <workItem from="1661355358596" duration="3128000" />
       <workItem from="1661433727465" duration="4796000" />
       <workItem from="1661509505429" duration="14165000" />
-      <workItem from="1661595387038" duration="10981000" />
+      <workItem from="1661595387038" duration="12014000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
@@ -434,7 +436,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/skills_auditor_new_new$TestSuite.ic" NAME="TestSuite Coverage Results" MODIFIED="1661611398087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/skills_auditor_new_new$TestSuite.ic" NAME="TestSuite Coverage Results" MODIFIED="1661612716107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.employeebc.*</FILTER>
     </SUITE>
   </component>
