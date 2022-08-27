@@ -53,6 +53,7 @@ public class ManagerApplicationServiceTests {
 
     }
 
+
     private final Identity VALID_ID = UniqueIDFactory.createID();
     private final String VALID_FIRSTNAME = "Test";
     private final String VALID_SURNAME = "Test";

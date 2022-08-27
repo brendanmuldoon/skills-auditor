@@ -3,6 +3,9 @@ package com.example.employeebc;
 import com.example.employeebc.employee.application.manager.ManagerApplicationServiceTests;
 import com.example.employeebc.employee.application.manager.ManagerQueryHandlerTests;
 import com.example.employeebc.employee.application.manager.mappers.ManagerJpaToDTOMapperTests;
+import com.example.employeebc.employee.application.staff.StaffApplicationServiceTests;
+import com.example.employeebc.employee.application.staff.StaffQueryHandlerTests;
+import com.example.employeebc.employee.application.staff.mappers.StaffJpaToDTOMapperTests;
 import com.example.employeebc.employee.domain.common.*;
 import com.example.employeebc.employee.domain.manager.DTO.ManagerDTOTests;
 import com.example.employeebc.employee.domain.manager.DTO.ManagerTeamDTOTests;
@@ -33,7 +36,10 @@ import org.junit.platform.suite.api.Suite;
                 ExpirationDateTests.class,
                 ManagerJpaToDTOMapperTests.class,
                 ManagerApplicationServiceTests.class,
-                ManagerQueryHandlerTests.class
+                ManagerQueryHandlerTests.class,
+                StaffQueryHandlerTests.class,
+                StaffApplicationServiceTests.class,
+                StaffJpaToDTOMapperTests.class
         }
 )
 public class TestSuite {
