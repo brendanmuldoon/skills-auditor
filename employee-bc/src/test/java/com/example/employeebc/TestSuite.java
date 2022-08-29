@@ -17,6 +17,8 @@ import com.example.employeebc.employee.domain.staff.DTO.StaffSkillDTOTests;
 import com.example.employeebc.employee.domain.staff.ExpirationDateTests;
 import com.example.employeebc.employee.infrastructure.manager.ManagerRepositoryTests;
 import com.example.employeebc.employee.infrastructure.staff.StaffRepositoryTests;
+import com.example.employeebc.employee.ui.manager.ManagerControllerTests;
+import com.example.employeebc.employee.ui.staff.StaffControllerTests;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
@@ -43,7 +45,8 @@ import org.junit.platform.suite.api.Suite;
                 StaffApplicationServiceTests.class,
                 StaffJpaToDTOMapperTests.class,
                 ManagerRepositoryTests.class,
-                StaffRepositoryTests.class
+                StaffRepositoryTests.class,
+                StaffControllerTests.class
         }
 )
 public class TestSuite {

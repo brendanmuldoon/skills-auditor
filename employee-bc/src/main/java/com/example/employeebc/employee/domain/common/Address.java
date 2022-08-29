@@ -11,6 +11,7 @@ public class Address extends ValueObject {
     private String streetName;
     private String postcode;
 
+    public Address() {}
     public Address(String houseNumber, String streetName, String postcode){
         setHouseNumber(houseNumber);
         setStreetName(streetName);

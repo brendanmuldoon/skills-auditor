@@ -1,0 +1,20 @@
+{
+  "staffId": "5199227a-0845-11ed-861d-0242ac120002",
+  "fullName": {
+    "firstName": "EMZ",
+    "surname": "Muldoon"
+  },
+  "address": {
+    "houseNumber": "66666666",
+    "streetName": "Foxton Place",
+    "postcode": "BT365FS"
+  },
+  "role": "STAFF",
+  "securityCredentials": {
+    "username": "emma",
+    "password": "password"
+  },
+  "userId": "123",
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbW1hIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsInJvbGUiOiJVU0VSIiwiZmlyc3QgbmFtZSI6IkVtbWEiLCJzdXJuYW1lIjoiTXVsZG9vbiIsImlkIjoiNTE5OTIyN2EtMDg0NS0xMWVkLTg2MWQtMDI0MmFjMTIwMDAyIiwiZXhwIjoxNjYwNzY1MjkzLCJpYXQiOjE2NjA3NDcyOTMsInVzZXJuYW1lIjoiZW1tYSJ9.RBP51RRAENzkFTUdaTtnjslHSiK8mNPLW_qbrPY7AMYeBjQje7uSG617X8OwtcrLWOA26tt8wTPCJDhMGwuvaA",
+  "username": "emma"
+}

@@ -1,14 +1,18 @@
 package com.example.employeebc.employee.domain.common;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import static com.example.employeebc.ApplicationConstants.*;
 
 @Getter
+@Setter
 public class FullName extends ValueObject {
 
     private String firstName;
     private String surname;
+
+    public FullName() {}
 
     public FullName(String firstName, String surname) {
         setFirstName(firstName);

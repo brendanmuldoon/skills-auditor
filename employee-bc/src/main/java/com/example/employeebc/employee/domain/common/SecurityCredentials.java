@@ -9,6 +9,8 @@ public class SecurityCredentials extends ValueObject {
 
     private String password;
 
+    public SecurityCredentials(){}
+
     public SecurityCredentials(String username, String password) {
         setUsername(username);
         setPassword(password);

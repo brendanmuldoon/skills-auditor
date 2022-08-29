@@ -1,0 +1,12 @@
+{
+  "skillId": "c347b348-0c08-11ed-861d-0242ac120002",
+  "strengthOfSkill": "INTERMEDIATE",
+  "expirationDate": {
+    "month": 12,
+    "year": 2024
+  },
+  "staffId" : "5199227a-0845-11ed-861d-0242ac120002",
+  "userId": "123e4567-e89b-12d3-a456-426614174000",
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJicmVuZHkiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwicm9sZSI6IkFETUlOIiwiZmlyc3QgbmFtZSI6IkJyZW5kYW4iLCJzdXJuYW1lIjoiTXVsZG9vbiIsImlkIjoiMTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDAwIiwiZXhwIjoxNjYwOTE0MzI1LCJpYXQiOjE2NjA4OTYzMjUsInVzZXJuYW1lIjoiYnJlbmR5In0.L8OTD1zz6wsJRTzvz7wLGU6d3ERuGD-bPFzhFBZtHs4uZw6rcCUs_S2upBXth01UvS20SWmxaBrM05D-AZZeHg",
+  "username": "brendy"
+}

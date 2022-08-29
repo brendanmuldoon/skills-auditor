@@ -1,0 +1,12 @@
+{
+    "skillId": "ed20eddc-0c27-11ed-861d-0242ac120002",
+    "strengthOfSkill": "BASIC",
+    "expirationDate": {
+        "month": 12,
+        "year": 2022
+    },
+    "staffId": "5199227a-0845-11ed-861d-0242ac120002",
+    "userId": "5199227a-0845-11ed-861d-0242ac120002",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbW1hIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsInJvbGUiOiJVU0VSIiwiZmlyc3QgbmFtZSI6IkVtbWEiLCJzdXJuYW1lIjoiTXVsZG9vbiIsImlkIjoiNTE5OTIyN2EtMDg0NS0xMWVkLTg2MWQtMDI0MmFjMTIwMDAyIiwiZXhwIjoxNjYxMTgyMDgyLCJpYXQiOjE2NjExNjQwODIsInVzZXJuYW1lIjoiZW1tYSJ9.tS_YvcFwke3ayjrkp_UrX2_l82jJvULKleQxqzn3FnWL8-Hijf3Y6g-sqrQ0uYG0QnJmyXk8DpDzxNP5rV1O2Q",
+    "username": "emma"
+ }
