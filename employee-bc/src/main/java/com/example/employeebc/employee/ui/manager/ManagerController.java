@@ -2,8 +2,10 @@ package com.example.employeebc.employee.ui.manager;
 
 import com.example.employeebc.employee.application.manager.commands.*;
 import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTOList;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -71,7 +73,7 @@ public class ManagerController {
     }
 
     @PostMapping("/createSkill")
-    public void createSkill(@RequestBody CreateSkillCommand createSkillCommand) {
+    public void createSkill(@RequestBody @NotNull CreateSkillCommand createSkillCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(createSkillCommand.getId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
             applicationService.createSkill(createSkillCommand);

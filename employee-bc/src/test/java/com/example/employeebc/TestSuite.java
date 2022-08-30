@@ -46,7 +46,8 @@ import org.junit.platform.suite.api.Suite;
                 StaffJpaToDTOMapperTests.class,
                 ManagerRepositoryTests.class,
                 StaffRepositoryTests.class,
-                StaffControllerTests.class
+                StaffControllerTests.class,
+                ManagerControllerTests.class
         }
 )
 public class TestSuite {
