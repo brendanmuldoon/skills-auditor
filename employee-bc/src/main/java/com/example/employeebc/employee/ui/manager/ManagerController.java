@@ -2,14 +2,15 @@ package com.example.employeebc.employee.ui.manager;
 
 import com.example.employeebc.employee.application.manager.commands.*;
 import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTOList;
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+
+import static com.example.employeebc.ApplicationConstants.NOT_FOUND_ERROR_MSG;
+import static com.example.employeebc.ApplicationConstants.USER_NOT_AUTHORISED_ERROR_MSG;
 
 @RestController
 @RequestMapping("/manager")
@@ -30,10 +31,10 @@ public class ManagerController {
             if(!response.isEmpty()) {
                 return response;
             } else {
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found");
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, NOT_FOUND_ERROR_MSG);
             }
         }
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
     }
 
     @PostMapping("/team/bySkill/{skill_id}")
@@ -47,7 +48,7 @@ public class ManagerController {
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND);
             }
         }
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
     }
 
     @PostMapping("/team/expiredSkills")
@@ -59,7 +60,7 @@ public class ManagerController {
             }
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
     }
 
     @PostMapping("/team/addToTeam/{staff_id}")
@@ -68,7 +69,7 @@ public class ManagerController {
         if(identityService.isAdmin(command)) {
             applicationService.addStaffToManagerTeam(command.getId(), staffId);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -78,7 +79,7 @@ public class ManagerController {
         if(identityService.isAdmin(userDetails)) {
             applicationService.createSkill(createSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -88,7 +89,7 @@ public class ManagerController {
         if(identityService.isAdmin(userDetails)) {
             applicationService.editSkill(editSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -98,7 +99,7 @@ public class ManagerController {
         if(identityService.isAdmin(userDetails)) {
             applicationService.deleteSkill(deleteSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -110,10 +111,10 @@ public class ManagerController {
             if(!response.getSkills().isEmpty()) {
                 return response;
             } else {
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Category id: '%s' not found", categoryId));
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, NOT_FOUND_ERROR_MSG);
             }
         }
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
 
     }
 
@@ -123,7 +124,7 @@ public class ManagerController {
         if (identityService.isAdmin(userDetails)) {
             applicationService.createCategory(createSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -134,7 +135,7 @@ public class ManagerController {
         if (identityService.isAdmin(userDetails)) {
             applicationService.editCategory(editCategoryCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -145,7 +146,7 @@ public class ManagerController {
         if(identityService.isAdmin(userDetails)) {
             applicationService.deleteCategory(deleteCategoryCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 

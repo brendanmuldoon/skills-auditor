@@ -29,6 +29,9 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+import static com.example.employeebc.ApplicationConstants.MANAGER_ID_NOT_RECOGNISED_ERROR_MSG;
+import static com.example.employeebc.ApplicationConstants.STAFF_ID_NOT_RECOGNISED_ERROR_MSG;
+
 @Service
 @AllArgsConstructor
 @Transactional
@@ -74,10 +77,10 @@ public class ManagerApplicationService implements IManagerApplicationService {
                 managerRepository.save(managerJpa1);
 
             } else {
-                throw new IllegalArgumentException("Staff id is not recognised");
+                throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
             }
         } else {
-            throw new IllegalArgumentException("Manager id is not recognised");
+            throw new IllegalArgumentException(MANAGER_ID_NOT_RECOGNISED_ERROR_MSG);
         }
     }
 

@@ -26,6 +26,8 @@ import javax.jms.TextMessage;
 import javax.transaction.Transactional;
 import java.util.Optional;
 
+import static com.example.employeebc.ApplicationConstants.STAFF_ID_NOT_RECOGNISED_ERROR_MSG;
+
 @AllArgsConstructor
 @Service
 @Transactional
@@ -53,7 +55,7 @@ public class StaffApplicationService implements IStaffApplicationService {
             StaffJpa updatedStaff = staffToStaffJpaMapper.map(staff);
             staffRepository.save(updatedStaff);
         } else {
-            throw new IllegalArgumentException("Staff id is not recognised");
+            throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
     }
 
@@ -75,7 +77,7 @@ public class StaffApplicationService implements IStaffApplicationService {
             staffRepository.save(staffToStaffJpaMapper.map(staff));
 
         } else {
-            throw new IllegalArgumentException("Staff id is not recognised");
+            throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
     }
 
@@ -87,7 +89,7 @@ public class StaffApplicationService implements IStaffApplicationService {
             staff.updateStaffDetails(updateStaffDetailsCommand);
             staffRepository.save(staffToStaffJpaMapper.map(staff));
         } else {
-            throw new IllegalArgumentException("Staff id is not recognised");
+            throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
     }
 
@@ -100,7 +102,7 @@ public class StaffApplicationService implements IStaffApplicationService {
             StaffJpa updatedStaffJpa = staffToStaffJpaMapper.map(staff);
             staffRepository.save(updatedStaffJpa);
         } else {
-            throw new IllegalArgumentException("Staff id is not recognised");
+            throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
     }
 

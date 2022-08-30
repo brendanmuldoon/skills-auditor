@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import static com.example.employeebc.ApplicationConstants.USER_NOT_AUTHORISED_ERROR_MSG;
+
 @RequestMapping("/staff")
 @RestController
 @AllArgsConstructor
@@ -24,7 +26,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffDetailsCommand.getUserId())) {
             applicationService.updateStaffDetails(updateStaffDetailsCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -34,7 +36,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, addStaffSkillCommand.getUserId())) {
             applicationService.addStaffSkill(addStaffSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -44,7 +46,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, removeStaffSkillCommand.getUserId())) {
             applicationService.removeStaffSkill(removeStaffSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
@@ -54,7 +56,7 @@ public class StaffController {
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffSkillCommand.getUserId())) {
             applicationService.updateStaffSkill(updateStaffSkillCommand);
         } else {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not authorised");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
         }
     }
 
