@@ -73,7 +73,7 @@ public class ManagerController {
     }
 
     @PostMapping("/createSkill")
-    public void createSkill(@RequestBody @NotNull CreateSkillCommand createSkillCommand) {
+    public void createSkill(@RequestBody CreateSkillCommand createSkillCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(createSkillCommand.getId(), createSkillCommand.getToken(), createSkillCommand.getUsername());
         if(identityService.isAdmin(userDetails)) {
             applicationService.createSkill(createSkillCommand);

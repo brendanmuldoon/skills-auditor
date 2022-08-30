@@ -1,5 +1,8 @@
 package com.example.employeebc.employee.ui.manager;
 
+import com.example.employeebc.employee.application.manager.commands.DeleteSkillCommand;
+import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTO;
+import com.example.employeebc.employee.application.manager.dto.EmployeeSkillDTOList;
 import com.example.employeebc.employee.application.manager.dto.ManagerTeamDTO;
 import com.example.employeebc.employee.domain.common.FullName;
 import com.example.employeebc.employee.domain.manager.ManagerTeam;
@@ -38,6 +41,8 @@ public class ManagerControllerTests {
 
     Resource userDetails;
 
+    Resource editSkillCommand;
+
     @BeforeEach
     void init() {
         MockitoAnnotations.openMocks(this);
@@ -49,6 +54,7 @@ public class ManagerControllerTests {
                 .build();
 
         userDetails = new ClassPathResource("data/userDetails.json");
+        editSkillCommand = new ClassPathResource("data/editSkillCommand.json");
 
   }
 
@@ -163,8 +169,166 @@ public class ManagerControllerTests {
 
     }
 
+    @Test
+    void test10() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(false);
 
 
+        mockMvc.perform(MockMvcRequestBuilders.put("/manager/editSkill")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isUnauthorized());
+    }
+
+    @Test
+    void test11() throws Exception {
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/manager/editSkill")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @Test
+    void test12() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(false);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/manager/deleteSkill")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isUnauthorized());
+    }
+
+    @Test
+    void test13() throws Exception {
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/manager/deleteSkill")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @Test
+    void test14() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(false);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/manager/findAllSkillsByCategory/{category_id}", "123")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isUnauthorized());
+    }
+
+    @Test
+    void test15() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+        Mockito.when(queryHandler.findSkillsByCategory(Mockito.anyString())).thenReturn(new EmployeeSkillDTOList());
+
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/manager/findAllSkillsByCategory/{category_id}", "123")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isNotFound());
+    }
+
+    @Test
+    void test16() throws Exception {
+
+        List<EmployeeSkillDTO> skills = new ArrayList<>();
+        EmployeeSkillDTO skill = new EmployeeSkillDTO();
+        skill.setDescription("test");
+        skill.setId("123");
+        skills.add(skill);
+        EmployeeSkillDTOList employeeSkillDTOList = new EmployeeSkillDTOList();
+        employeeSkillDTOList.setSkills(skills);
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+        Mockito.when(queryHandler.findSkillsByCategory(Mockito.anyString())).thenReturn(employeeSkillDTOList);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/manager/findAllSkillsByCategory/{category_id}", "123")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @Test
+    void test17() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(false);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/manager/createCategory")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isUnauthorized());
+    }
+
+    @Test
+    void test18() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/manager/createCategory")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @Test
+    void test19() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(false);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/manager/editCategory")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isUnauthorized());
+    }
+
+    @Test
+    void test20() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/manager/editCategory")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @Test
+    void test21() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(false);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/manager/deleteCategory")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isUnauthorized());
+    }
+
+    @Test
+    void test22() throws Exception {
+
+        Mockito.when(identityService.isAdmin(Mockito.any())).thenReturn(true);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/manager/deleteCategory")
+                        .header("Content-Type", "application/json;charset=utf-8")
+                        .content((convertFileToString(userDetails))))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
 
 
     private String convertFileToString(Resource resource) throws IOException {
