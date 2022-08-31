@@ -32,7 +32,7 @@ public class StaffSkillJpaValueObject {
     private LocalDate expiry;
 
     @Column(name = "staff_id")
-    private String staff;
+    private String staffId;
 
     public StaffSkillJpaValueObject(){}
 
@@ -40,15 +40,17 @@ public class StaffSkillJpaValueObject {
             long id,
             String skillId,
             String strengthOfSkill,
-            LocalDate expiry) {
+            LocalDate expiry,
+            String staffId) {
         this.id = id;
         this.skillId = skillId;
         this.strengthOfSkill = strengthOfSkill;
         this.expiry = expiry;
+        this.staffId=staffId;
     }
 
-    public static StaffSkillJpaValueObject staffSkillJpaOf(Long id, String skillId, String strengthOfSkill, LocalDate expirationDate) {
+    public static StaffSkillJpaValueObject staffSkillJpaOf(Long id, String skillId, String strengthOfSkill, LocalDate expirationDate, String staffId) {
 
-        return new StaffSkillJpaValueObject(id, skillId, strengthOfSkill, expirationDate);
+        return new StaffSkillJpaValueObject(id, skillId, strengthOfSkill, expirationDate, staffId);
     }
 }
