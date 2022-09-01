@@ -35,7 +35,7 @@ public class StaffToStaffJpaMapper implements IStaffToStaffJpaMapper {
                             skill.strengthOfSkill().getStrength(),
                             expiryDate);
             staffSkillJpaValueObject.setId(skill.getId());
-            staffSkillJpaValueObject.setStaff(staffJpa.getId());
+            staffSkillJpaValueObject.setStaffId(staffJpa.getId());
             staffJpa.addSkill(staffSkillJpaValueObject);
         }
         return staffJpa;

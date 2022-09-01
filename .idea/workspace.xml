@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillQueryHandlerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillApplicationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillApplicationServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffSkillToStaffSkillJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffSkillToStaffSkillJpaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffToStaffJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffToStaffJpaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffSkillJpaValueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffSkillJpaValueObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,34 +67,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/employee-bc/src/test/java/com/example/employeebc&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;980b68de11ae0503f54d0232fb8764fa&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/employee-bc/src/test/java/com/example/employeebc",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reactor",
+    "spring.configuration.checksum": "39cc0d9a9780e60fe8f0583ae72c8448"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.identitybc.controller" />
@@ -136,8 +142,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SkillApplicationServiceTests.test08">
-    <configuration name="SkillApplicationServiceTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestSuite">
+    <configuration name="SkillQueryHandlerTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
@@ -146,73 +152,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillQueryHandlerTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
+      <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillQueryHandlerTests.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
+      <option name="METHOD_NAME" value="test04" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillQueryHandlerTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
       <option name="METHOD_NAME" value="test05" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillApplicationServiceTests.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test06" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SkillApplicationServiceTests.test07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test07" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SkillApplicationServiceTests.test08" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test08" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SkillApplicationServiceTests.test09" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test09" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.TestSuite" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -266,11 +271,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test06" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test07" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test08" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test09" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test05" />
+      <item itemvalue="JUnit.SkillQueryHandlerTests.test02" />
+      <item itemvalue="JUnit.SkillQueryHandlerTests.test03" />
+      <item itemvalue="JUnit.SkillQueryHandlerTests.test04" />
+      <item itemvalue="JUnit.SkillQueryHandlerTests.test05" />
+      <item itemvalue="JUnit.TestSuite" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
       <item itemvalue="Spring Boot.IdentityBcApplication" />
@@ -279,11 +284,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test08" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test09" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test07" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test06" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test05" />
+        <item itemvalue="JUnit.TestSuite" />
+        <item itemvalue="JUnit.SkillQueryHandlerTests.test05" />
+        <item itemvalue="JUnit.SkillQueryHandlerTests.test04" />
+        <item itemvalue="JUnit.SkillQueryHandlerTests.test03" />
+        <item itemvalue="JUnit.SkillQueryHandlerTests.test02" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +345,8 @@
       <workItem from="1661851220005" duration="5902000" />
       <workItem from="1661864697782" duration="5552000" />
       <workItem from="1661929067950" duration="3458000" />
-      <workItem from="1662015478498" duration="2442000" />
+      <workItem from="1662015478498" duration="2969000" />
+      <workItem from="1662018489126" duration="2725000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

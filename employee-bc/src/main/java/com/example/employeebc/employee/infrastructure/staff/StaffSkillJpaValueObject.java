@@ -40,17 +40,15 @@ public class StaffSkillJpaValueObject {
             long id,
             String skillId,
             String strengthOfSkill,
-            LocalDate expiry,
-            String staffId) {
+            LocalDate expiry) {
         this.id = id;
         this.skillId = skillId;
         this.strengthOfSkill = strengthOfSkill;
         this.expiry = expiry;
-        this.staffId=staffId;
     }
 
-    public static StaffSkillJpaValueObject staffSkillJpaOf(Long id, String skillId, String strengthOfSkill, LocalDate expirationDate, String staffId) {
+    public static StaffSkillJpaValueObject staffSkillJpaOf(Long id, String skillId, String strengthOfSkill, LocalDate expirationDate) {
 
-        return new StaffSkillJpaValueObject(id, skillId, strengthOfSkill, expirationDate, staffId);
+        return new StaffSkillJpaValueObject(id, skillId, strengthOfSkill, expirationDate);
     }
 }

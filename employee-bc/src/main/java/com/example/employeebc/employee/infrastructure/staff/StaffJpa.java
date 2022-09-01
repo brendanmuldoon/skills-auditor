@@ -44,7 +44,7 @@ public class StaffJpa implements IStaffJpa {
     @Column(name="securitycedentials_password")
     private String securitycedentials_password;
 
-    @OneToMany(mappedBy = "staff", cascade = {CascadeType.ALL}, orphanRemoval = true)
+    @OneToMany(mappedBy = "staffId", cascade = {CascadeType.ALL}, orphanRemoval = true)
     private List<StaffSkillJpaValueObject> skills;
 
     protected StaffJpa(){}
