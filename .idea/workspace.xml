@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/SkillJpaToSkillMapperTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/SkillToSkillJpaMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/ui/skill/SkillControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/ui/skill/SkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/ui/skill/SkillController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,11 +120,11 @@
       <recent name="com.example.skillsauditor.employee.application.manager.commands" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.skillbc.skill.ui.skill" />
       <recent name="com.example.skillbc.skill.domain.skill" />
       <recent name="com.example.skillbc.skill.domain.skill.DTO" />
       <recent name="com.example.skillbc.skill.domain.common" />
       <recent name="com.example.skillbc.skill.application.skill" />
-      <recent name="com.example.skillbc.skill.application.category" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.skillsauditor.skill.domain.common" />
@@ -138,83 +138,82 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SkillToSkillJpaMapperTests.test01">
-    <configuration name="CategoryToCategoryJpaMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestSuite">
+    <configuration name="SkillControllerTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.ui.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.CategoryToCategoryJpaMapperTests" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.ui.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.ui.skill.SkillControllerTests" />
       <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillJpaToSkillMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillControllerTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.ui.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.SkillJpaToSkillMapperTests" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.ui.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.ui.skill.SkillControllerTests" />
+      <option name="METHOD_NAME" value="test02" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillTests.tes02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillControllerTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.ui.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.SkillTests" />
-      <option name="METHOD_NAME" value="tes02" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.ui.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.ui.skill.SkillControllerTests" />
+      <option name="METHOD_NAME" value="test03" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillControllerTests.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.ui.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.SkillTests" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.ui.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.ui.skill.SkillControllerTests" />
+      <option name="METHOD_NAME" value="test04" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillToSkillJpaMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.SkillToSkillJpaMapperTests" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.TestSuite" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -268,11 +267,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CategoryToCategoryJpaMapperTests.test01" />
-      <item itemvalue="JUnit.SkillJpaToSkillMapperTests.test01" />
-      <item itemvalue="JUnit.SkillTests.tes02" />
-      <item itemvalue="JUnit.SkillTests.test01" />
-      <item itemvalue="JUnit.SkillToSkillJpaMapperTests.test01" />
+      <item itemvalue="JUnit.SkillControllerTests.test01" />
+      <item itemvalue="JUnit.SkillControllerTests.test02" />
+      <item itemvalue="JUnit.SkillControllerTests.test03" />
+      <item itemvalue="JUnit.SkillControllerTests.test04" />
+      <item itemvalue="JUnit.TestSuite" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
       <item itemvalue="Spring Boot.IdentityBcApplication" />
@@ -281,11 +280,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SkillToSkillJpaMapperTests.test01" />
-        <item itemvalue="JUnit.SkillJpaToSkillMapperTests.test01" />
-        <item itemvalue="JUnit.SkillTests.tes02" />
-        <item itemvalue="JUnit.SkillTests.test01" />
-        <item itemvalue="JUnit.CategoryToCategoryJpaMapperTests.test01" />
+        <item itemvalue="JUnit.TestSuite" />
+        <item itemvalue="JUnit.SkillControllerTests.test04" />
+        <item itemvalue="JUnit.SkillControllerTests.test03" />
+        <item itemvalue="JUnit.SkillControllerTests.test02" />
+        <item itemvalue="JUnit.SkillControllerTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -343,7 +342,7 @@
       <workItem from="1661864697782" duration="5552000" />
       <workItem from="1661929067950" duration="3458000" />
       <workItem from="1662015478498" duration="2969000" />
-      <workItem from="1662018489126" duration="8428000" />
+      <workItem from="1662018489126" duration="11207000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

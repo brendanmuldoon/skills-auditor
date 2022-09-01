@@ -7,6 +7,7 @@ import com.example.skillbc.skill.domain.common.IdentityTests;
 import com.example.skillbc.skill.domain.skill.*;
 import com.example.skillbc.skill.domain.skill.DTO.CategoryDTOTests;
 import com.example.skillbc.skill.domain.skill.DTO.SkillDTOTests;
+import com.example.skillbc.skill.ui.skill.SkillControllerTests;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
@@ -23,7 +24,8 @@ import org.junit.platform.suite.api.Suite;
                 CategoryToCategoryJpaMapperTests.class,
                 SkillTests.class,
                 SkillJpaToSkillMapperTests.class,
-                SkillToSkillJpaMapperTests.class
+                SkillToSkillJpaMapperTests.class,
+                SkillControllerTests.class
         }
 )
 public class TestSuite {

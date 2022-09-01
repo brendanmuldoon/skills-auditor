@@ -34,7 +34,6 @@ public class SkillController {
         }
     }
 
-    // view all skills by category
     @GetMapping("/findAllSkillsByCategory/{category_id}")
     public SkillDTOList getSkillsByCategoryId(@PathVariable(name = "category_id") String categoryId){
         SkillDTOList response = queryHandler.findByCategoryId(categoryId);
