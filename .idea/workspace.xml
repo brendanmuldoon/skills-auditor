@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillApplicationServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffSkillToStaffSkillJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffSkillToStaffSkillJpaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffSkillJpaValueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffSkillJpaValueObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillApplicationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillApplicationServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,71 +136,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SkillApplicationServiceTests.test05">
-    <configuration name="SkillApplicationServiceTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SkillApplicationServiceTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test02" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SkillApplicationServiceTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test03" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SkillApplicationServiceTests.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skill-bc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
-      <option name="METHOD_NAME" value="test04" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SkillApplicationServiceTests.test08">
     <configuration name="SkillApplicationServiceTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
@@ -215,6 +148,70 @@
       <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
       <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
       <option name="METHOD_NAME" value="test05" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillApplicationServiceTests.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test06" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillApplicationServiceTests.test07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test07" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillApplicationServiceTests.test08" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test08" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillApplicationServiceTests.test09" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skill-bc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillApplicationServiceTests" />
+      <option name="METHOD_NAME" value="test09" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -269,10 +266,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test01" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test02" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test03" />
-      <item itemvalue="JUnit.SkillApplicationServiceTests.test04" />
+      <item itemvalue="JUnit.SkillApplicationServiceTests.test06" />
+      <item itemvalue="JUnit.SkillApplicationServiceTests.test07" />
+      <item itemvalue="JUnit.SkillApplicationServiceTests.test08" />
+      <item itemvalue="JUnit.SkillApplicationServiceTests.test09" />
       <item itemvalue="JUnit.SkillApplicationServiceTests.test05" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
@@ -282,11 +279,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SkillApplicationServiceTests.test08" />
+        <item itemvalue="JUnit.SkillApplicationServiceTests.test09" />
+        <item itemvalue="JUnit.SkillApplicationServiceTests.test07" />
+        <item itemvalue="JUnit.SkillApplicationServiceTests.test06" />
         <item itemvalue="JUnit.SkillApplicationServiceTests.test05" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test04" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test03" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test02" />
-        <item itemvalue="JUnit.SkillApplicationServiceTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +339,8 @@
       <workItem from="1661784789585" duration="4797000" />
       <workItem from="1661851220005" duration="5902000" />
       <workItem from="1661864697782" duration="5552000" />
-      <workItem from="1661929067950" duration="3083000" />
+      <workItem from="1661929067950" duration="3458000" />
+      <workItem from="1662015478498" duration="2442000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
@@ -412,16 +410,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/skillsauditor/skill/infrastructure/skill/SkillJpa.java</url>
           <line>39</line>
           <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/application/skill/SkillApplicationService.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/application/skill/SkillApplicationService.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="171" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

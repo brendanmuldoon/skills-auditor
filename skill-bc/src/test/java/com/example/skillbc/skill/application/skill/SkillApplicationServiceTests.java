@@ -1,8 +1,9 @@
 package com.example.skillbc.skill.application.skill;
 
-import com.example.skillbc.skill.application.category.events.SkillCreateCategoryEvent;
 import com.example.skillbc.skill.application.category.interfaces.ICategoryRepository;
+import com.example.skillbc.skill.application.skill.events.SkillCategoryDeleteEvent;
 import com.example.skillbc.skill.application.skill.events.SkillCreateSkillEvent;
+import com.example.skillbc.skill.application.skill.events.SkillDeleteSkillEvent;
 import com.example.skillbc.skill.application.skill.events.SkillEditSkillEvent;
 import com.example.skillbc.skill.application.skill.interfaces.ISkillJpaToSkillMapper;
 import com.example.skillbc.skill.application.skill.interfaces.ISkillRepository;
@@ -19,16 +20,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.jms.core.JmsTemplate;
 
 import javax.jms.JMSException;
 import javax.jms.TextMessage;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class SkillApplicationServiceTests {
 
@@ -139,6 +137,66 @@ public class SkillApplicationServiceTests {
         classUnderTest.editSkillListener(message);
 
         Mockito.verify(skillRepository, Mockito.times(1)).save(Mockito.any());
+    }
+
+    @Test
+    void test06() throws JMSException, JsonProcessingException {
+        Mockito.when(message.getText()).thenReturn("test");
+        Mockito.when(objectMapper.readValue("test", SkillDeleteSkillEvent.class)).thenReturn(new SkillDeleteSkillEvent());
+        Mockito.when(skillRepository.findById(Mockito.anyString())).thenReturn(Optional.empty());
+
+        classUnderTest.deleteSkillListener(message);
+
+        Mockito.verify(skillRepository, Mockito.times(0)).delete(Mockito.any());
+    }
+
+    @Test
+    void test07() throws JMSException, JsonProcessingException {
+        SkillDeleteSkillEvent event = new SkillDeleteSkillEvent();
+        event.setId("123");
+
+        Mockito.when(message.getText()).thenReturn("test");
+        Mockito.when(objectMapper.readValue("test", SkillDeleteSkillEvent.class)).thenReturn(event);
+        Mockito.when(skillRepository.findById(Mockito.anyString())).thenReturn(Optional.of(new SkillJpa("1", "test", new CategoryJpaValueObject("1", "test"))));
+
+        classUnderTest.deleteSkillListener(message);
+
+        Mockito.verify(skillRepository, Mockito.times(1)).delete(Mockito.any());
+    }
+
+    @Test
+    void test08() throws JMSException, JsonProcessingException {
+        String eventToJson = "test";
+        SkillCategoryDeleteEvent event = new SkillCategoryDeleteEvent();
+        event.setId("1");
+
+        Mockito.when(message.getText()).thenReturn("test");
+        Mockito.when(objectMapper.readValue("test", SkillCategoryDeleteEvent.class)).thenReturn(event);
+        Mockito.when(objectMapper.writeValueAsString(event)).thenReturn(eventToJson);
+        Mockito.when(skillRepository.findByCategoryId(Mockito.anyString())).thenReturn(new ArrayList<>());
+
+
+        classUnderTest.handleDeleteCategoryEvent(message);
+
+        Mockito.verify(jmsTemplate, Mockito.times(1)).convertAndSend("CATEGORY.DELETE.QUEUE", eventToJson);
+    }
+
+    @Test
+    void test09() throws JMSException, JsonProcessingException {
+
+        String eventToJson = "test";
+        SkillCategoryDeleteEvent event = new SkillCategoryDeleteEvent();
+        event.setId("1");
+
+        List<SkillJpa> list = new ArrayList<>();
+        list.add(new SkillJpa("1", "test", new CategoryJpaValueObject("1", "test")));
+        Mockito.when(message.getText()).thenReturn("test");
+        Mockito.when(objectMapper.readValue("test", SkillCategoryDeleteEvent.class)).thenReturn(event);
+        Mockito.when(skillRepository.findByCategoryId(Mockito.anyString())).thenReturn(list);
+
+        classUnderTest.handleDeleteCategoryEvent(message);
+
+        Mockito.verify(jmsTemplate, Mockito.times(0)).convertAndSend("CATEGORY.DELETE.QUEUE", eventToJson);
     }
 
 
