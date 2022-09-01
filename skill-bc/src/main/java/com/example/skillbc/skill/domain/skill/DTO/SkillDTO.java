@@ -17,6 +17,10 @@ public class SkillDTO {
 
     public SkillDTO(){}
 
+    public SkillDTO(SkillDTO skillDTO) {
+        this(skillDTO.getId(), skillDTO.getDescription(), skillDTO.getCategory());
+    }
+
     public SkillDTO(String id,
                     String description,
                     CategoryDTO category) {

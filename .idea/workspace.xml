@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/application/skill/SkillQueryHandlerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/common/IdentityTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/CategoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/CategoryToCategoryJpaMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/DTO/CategoryDTOTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/DTO/SkillDTOTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/domain/skill/SkillTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffSkillToStaffSkillJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffSkillToStaffSkillJpaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffToStaffJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/domain/staff/StaffToStaffJpaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffJpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffSkillJpaValueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/infrastructure/staff/StaffSkillJpaValueObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/DTO/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/DTO/CategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/DTO/SkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/DTO/SkillDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/domain/skill/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,11 +128,11 @@
       <recent name="com.example.skillsauditor.employee.application.manager.commands" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.skillbc.skill.domain.skill" />
+      <recent name="com.example.skillbc.skill.domain.skill.DTO" />
+      <recent name="com.example.skillbc.skill.domain.common" />
       <recent name="com.example.skillbc.skill.application.skill" />
       <recent name="com.example.skillbc.skill.application.category" />
-      <recent name="com.example.employeebc.employee.ui.staff" />
-      <recent name="com.example.employeebc.employee.ui.manager" />
-      <recent name="com.example.employeebc.employee.infrastructure.staff" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.skillsauditor.skill.domain.common" />
@@ -142,82 +146,83 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestSuite">
-    <configuration name="SkillQueryHandlerTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SkillTests.tes02">
+    <configuration name="CategoryTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
-      <option name="METHOD_NAME" value="test02" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.CategoryTests" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillQueryHandlerTests.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CategoryToCategoryJpaMapperTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
-      <option name="METHOD_NAME" value="test03" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.CategoryToCategoryJpaMapperTests" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillQueryHandlerTests.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillDTOTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.DTO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
-      <option name="METHOD_NAME" value="test04" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill.DTO" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.DTO.SkillDTOTests" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillQueryHandlerTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillTests.tes02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.skill.application.skill.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.application.skill" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.application.skill.SkillQueryHandlerTests" />
-      <option name="METHOD_NAME" value="test05" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.SkillTests" />
+      <option name="METHOD_NAME" value="tes02" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.skillbc.*" />
+          <option name="PATTERN" value="com.example.skillbc.skill.domain.skill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.skillbc" />
-      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.TestSuite" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.example.skillbc.skill.domain.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.example.skillbc.skill.domain.skill.SkillTests" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -271,11 +276,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SkillQueryHandlerTests.test02" />
-      <item itemvalue="JUnit.SkillQueryHandlerTests.test03" />
-      <item itemvalue="JUnit.SkillQueryHandlerTests.test04" />
-      <item itemvalue="JUnit.SkillQueryHandlerTests.test05" />
-      <item itemvalue="JUnit.TestSuite" />
+      <item itemvalue="JUnit.CategoryTests.test01" />
+      <item itemvalue="JUnit.CategoryToCategoryJpaMapperTests.test01" />
+      <item itemvalue="JUnit.SkillDTOTests.test01" />
+      <item itemvalue="JUnit.SkillTests.tes02" />
+      <item itemvalue="JUnit.SkillTests.test01" />
       <item itemvalue="Spring Boot.EmployeeBcApplication" />
       <item itemvalue="Spring Boot.EmployeeBcApplication (1)" />
       <item itemvalue="Spring Boot.IdentityBcApplication" />
@@ -284,11 +289,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestSuite" />
-        <item itemvalue="JUnit.SkillQueryHandlerTests.test05" />
-        <item itemvalue="JUnit.SkillQueryHandlerTests.test04" />
-        <item itemvalue="JUnit.SkillQueryHandlerTests.test03" />
-        <item itemvalue="JUnit.SkillQueryHandlerTests.test02" />
+        <item itemvalue="JUnit.SkillTests.tes02" />
+        <item itemvalue="JUnit.SkillTests.test01" />
+        <item itemvalue="JUnit.CategoryToCategoryJpaMapperTests.test01" />
+        <item itemvalue="JUnit.CategoryTests.test01" />
+        <item itemvalue="JUnit.SkillDTOTests.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +351,7 @@
       <workItem from="1661864697782" duration="5552000" />
       <workItem from="1661929067950" duration="3458000" />
       <workItem from="1662015478498" duration="2969000" />
-      <workItem from="1662018489126" duration="2725000" />
+      <workItem from="1662018489126" duration="6987000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

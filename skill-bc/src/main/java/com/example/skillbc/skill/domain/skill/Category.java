@@ -19,7 +19,9 @@ public class Category extends Entity {
         this.addDomainEvent(new NewCategoryAddedDomainEvent(this, id.id(), description));
     }
 
-
+    public Category(Category category) {
+        this(category.id(), category.description());
+    }
 
     public static Category categoryOf(Identity id, String description) {
         return new Category(id, description);

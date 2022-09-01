@@ -22,6 +22,10 @@ public class Skill extends Entity { // Aggregate
         return new Skill(newId, description, category);
     }
 
+    public Skill(Skill skill) {
+        this(skill.id(), skill.description(), skill.category());
+    }
+
 
     private void setDescription(String description) {
         assertArgumentNotEmpty(description, "Skill description must not be empty");
