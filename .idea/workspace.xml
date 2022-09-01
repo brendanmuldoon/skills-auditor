@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/skill/ui/skill/SkillControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/ExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/ui/skill/SkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/main/java/com/example/skillbc/skill/ui/skill/SkillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/skill-bc/src/test/java/com/example/skillbc/TestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +18,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -138,7 +136,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestSuite">
+  <component name="RunManager" selected="Spring Boot.EmployeeBcApplication">
     <configuration name="SkillControllerTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skill-bc" />
       <extension name="coverage">
@@ -342,7 +340,7 @@
       <workItem from="1661864697782" duration="5552000" />
       <workItem from="1661929067950" duration="3458000" />
       <workItem from="1662015478498" duration="2969000" />
-      <workItem from="1662018489126" duration="11207000" />
+      <workItem from="1662018489126" duration="12049000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
