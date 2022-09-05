@@ -26,6 +26,7 @@ import javax.jms.TextMessage;
 import javax.transaction.Transactional;
 import java.util.Optional;
 
+import static com.example.employeebc.ApplicationConstants.NO_SKILL_ERROR_MSG;
 import static com.example.employeebc.ApplicationConstants.STAFF_ID_NOT_RECOGNISED_ERROR_MSG;
 
 @AllArgsConstructor
@@ -36,24 +37,22 @@ public class StaffApplicationService implements IStaffApplicationService {
     private IStaffRepository staffRepository;
     private IStaffJpaToStaffMapper staffJpaToStaffMapper;
     private IStaffToStaffJpaMapper staffToStaffJpaMapper;
-
     private final Logger LOG = LoggerFactory.getLogger(getClass());
-
     private ObjectMapper objectMapper;
-
     private JmsTemplate jmsTemplate;
-
-
-
 
     @Override
     public void removeStaffSkill(IRemoveStaffSkillCommand removeSkillCommand) {
         Optional<StaffJpa> staffJpa = staffRepository.findById(removeSkillCommand.getStaffId());
-        if(staffJpa.isPresent()) { // need to validate that the staff has the skill before deleting
+        if(staffJpa.isPresent()) {
             Staff staff = staffJpaToStaffMapper.map(staffJpa.get());
-            staff.removeASkill(removeSkillCommand.getSkillId());
-            StaffJpa updatedStaff = staffToStaffJpaMapper.map(staff);
-            staffRepository.save(updatedStaff);
+            if(staff.hasSkill(removeSkillCommand.getSkillId())) {
+                staff.removeASkill(removeSkillCommand.getSkillId());
+                StaffJpa updatedStaff = staffToStaffJpaMapper.map(staff);
+                staffRepository.save(updatedStaff);
+            } else {
+                throw new IllegalArgumentException(NO_SKILL_ERROR_MSG);
+            }
         } else {
             throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
@@ -98,9 +97,14 @@ public class StaffApplicationService implements IStaffApplicationService {
         Optional<StaffJpa> staffJpa = staffRepository.findById(updateStaffSkillCommand.getStaffId());
         if(staffJpa.isPresent()) {
             Staff staff = staffJpaToStaffMapper.map(staffJpa.get());
-            staff.updateAStaffSkill(updateStaffSkillCommand);
-            StaffJpa updatedStaffJpa = staffToStaffJpaMapper.map(staff);
-            staffRepository.save(updatedStaffJpa);
+
+            if(staff.hasSkill(updateStaffSkillCommand.getSkillId())) {
+                staff.updateAStaffSkill(updateStaffSkillCommand);
+                StaffJpa updatedStaffJpa = staffToStaffJpaMapper.map(staff);
+                staffRepository.save(updatedStaffJpa);
+            } else {
+                throw new IllegalArgumentException(NO_SKILL_ERROR_MSG);
+            }
         } else {
             throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
@@ -131,7 +135,7 @@ public class StaffApplicationService implements IStaffApplicationService {
 
                         staff = staffJpaToStaffMapper.map(s);
 
-                        if (staff.retrieveSkillById(event.getId())) {
+                        if (staff.hasSkill(event.getId())) {
 
                             inUse = true;
 

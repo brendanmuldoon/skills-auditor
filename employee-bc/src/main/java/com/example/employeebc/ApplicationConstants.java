@@ -20,4 +20,6 @@ public class ApplicationConstants {
     public static final String USER_NOT_AUTHORISED_ERROR_MSG = "User is not authorised";
     public static final String NOT_FOUND_ERROR_MSG = "Not found";
 
+    public static final String NO_SKILL_ERROR_MSG = "Staff does not have that skill";
+
 }

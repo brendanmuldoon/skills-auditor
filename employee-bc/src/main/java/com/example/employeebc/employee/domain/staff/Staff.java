@@ -28,11 +28,12 @@ public class Staff extends Employee { // Aggregate
         return skills;
     }
 
-    public StaffSkill addSkill(StaffSkill newSkill) { // do nothing
+    public void addSkill(StaffSkill newSkill) {
         if(!skills.contains(newSkill)) {
             this.skills.add(newSkill);
+        } else {
+            throw new IllegalArgumentException("Already has that skill");
         }
-        return newSkill;
     }
 
     public void removeASkill(String skillId) { // do nothing
@@ -56,7 +57,7 @@ public class Staff extends Employee { // Aggregate
     }
 
 
-    public boolean retrieveSkillById(String id) {
+    public boolean hasSkill(String id) {
         for(StaffSkill s : skills) {
             if(s.skillId().equals(id)) {
                 return true;
