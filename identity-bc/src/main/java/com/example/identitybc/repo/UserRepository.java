@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends CrudRepository<AppUserJpa, Long> {
+public interface UserRepository extends CrudRepository<AppUserJpa, String> {
     @Query("FROM app_user u WHERE u.userName=:username AND u.password=:password")
     Optional<AppUserJpa> findUserByUsernameAndPassword(String username, String password);
 

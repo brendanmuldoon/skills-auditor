@@ -4,6 +4,7 @@ import com.example.employeebc.employee.application.manager.commands.UserDetails;
 import com.example.employeebc.employee.ui.manager.IIdentityService;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -20,13 +21,18 @@ public class IdentityService implements IIdentityService {
     }
 
     private String getResponseFromIdentityContext(UserDetails command, String URL){
-        RestTemplate restTemplate = new RestTemplate();
 
-        HttpEntity<UserDetails> request = new HttpEntity<>(
-                new UserDetails(command.getId(), command.getToken(), command.getUsername()));
-        String response = restTemplate
-                .postForObject(URL, request, String.class);
-        return response;
+        try {
+            RestTemplate restTemplate = new RestTemplate();
+
+            HttpEntity<UserDetails> request = new HttpEntity<>(
+                    new UserDetails(command.getId(), command.getToken(), command.getUsername()));
+            return restTemplate
+                    .postForObject(URL, request, String.class);
+        } catch (HttpClientErrorException ex) {
+            throw new IllegalArgumentException(ex.getMessage());
+        }
+
     }
 
     public boolean isSpecifiedUser(UserDetails command, String employeeId){

@@ -1,6 +1,7 @@
 package com.example.identitybc.repo;
 
 
+import com.example.identitybc.service.events.IdentityUpdateUsernameAndPasswordEvent;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,5 +40,10 @@ public class AppUserJpa {
     public String toString(){
         return String.format("%s, %s, %s, %s %s" , userUUID,
                 userName, password, role);
+    }
+
+    public void update(IdentityUpdateUsernameAndPasswordEvent event) {
+        this.userName = event.getUsername();
+        this.password = event.getPassword();
     }
 }

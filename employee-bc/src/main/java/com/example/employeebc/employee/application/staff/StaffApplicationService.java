@@ -1,6 +1,7 @@
 package com.example.employeebc.employee.application.staff;
 
 import com.example.employeebc.employee.application.manager.events.EmployeeDeleteSkillEvent;
+import com.example.employeebc.employee.application.manager.events.EmployeeUpdateUsernameAndPasswordEvent;
 import com.example.employeebc.employee.application.staff.interfaces.IStaffJpaToStaffMapper;
 import com.example.employeebc.employee.application.staff.interfaces.IStaffRepository;
 import com.example.employeebc.employee.application.staff.interfaces.IStaffToStaffJpaMapper;
@@ -13,6 +14,7 @@ import com.example.employeebc.employee.domain.staff.interfaces.IUpdateStaffDetai
 import com.example.employeebc.employee.domain.staff.interfaces.IUpdateStaffSkillCommand;
 import com.example.employeebc.employee.infrastructure.staff.StaffJpa;
 import com.example.employeebc.employee.ui.staff.IStaffApplicationService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -81,15 +83,29 @@ public class StaffApplicationService implements IStaffApplicationService {
     }
 
     @Override
-    public void updateStaffDetails(IUpdateStaffDetailsCommand updateStaffDetailsCommand) {
+    public void updateStaffDetails(IUpdateStaffDetailsCommand updateStaffDetailsCommand) throws JsonProcessingException {
         Optional<StaffJpa> staffJpa = staffRepository.findById(updateStaffDetailsCommand.getStaffId());
         if(staffJpa.isPresent()) {
+            boolean usernamePasswordChange = usernamePasswordIsUpdated(updateStaffDetailsCommand, staffJpa.get());
             Staff staff = staffJpaToStaffMapper.map(staffJpa.get());
             staff.updateStaffDetails(updateStaffDetailsCommand);
             staffRepository.save(staffToStaffJpaMapper.map(staff));
+            if(usernamePasswordChange) {
+                EmployeeUpdateUsernameAndPasswordEvent event = new EmployeeUpdateUsernameAndPasswordEvent();
+                event.setId(updateStaffDetailsCommand.getStaffId());
+                event.setPassword(updateStaffDetailsCommand.getSecurityCredentials().password());
+                event.setUsername(updateStaffDetailsCommand.getSecurityCredentials().username());
+                String eventToJson = objectMapper.writeValueAsString(event);
+                jmsTemplate.convertAndSend("IDENTITY.UPDATE.QUEUE", eventToJson);
+            }
         } else {
             throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
         }
+    }
+
+    private boolean usernamePasswordIsUpdated(IUpdateStaffDetailsCommand updateStaffDetailsCommand, StaffJpa staffJpa) {
+        return !updateStaffDetailsCommand.getSecurityCredentials().username().equals(staffJpa.getSecuritycredentials_username())
+                || !updateStaffDetailsCommand.getSecurityCredentials().password().equals(staffJpa.getSecuritycedentials_password());
     }
 
     @Override

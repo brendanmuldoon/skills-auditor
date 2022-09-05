@@ -128,7 +128,7 @@ public class StaffApplicationServiceTests {
     }
 
     @Test
-    void test05() {
+    void test05() throws JsonProcessingException {
         IUpdateStaffDetailsCommand updateStaffDetailsCommand = Mockito.mock(IUpdateStaffDetailsCommand.class);
         Optional<StaffJpa> staffJpa = generateValidStaffJpa();
         Staff staff = generateValidStaff();

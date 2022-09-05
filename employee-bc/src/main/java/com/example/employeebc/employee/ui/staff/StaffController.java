@@ -6,6 +6,7 @@ import com.example.employeebc.employee.application.staff.commands.RemoveStaffSki
 import com.example.employeebc.employee.application.staff.commands.UpdateStaffDetailsCommand;
 import com.example.employeebc.employee.application.staff.commands.UpdateStaffSkillCommand;
 import com.example.employeebc.employee.ui.manager.IIdentityService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class StaffController {
     private IIdentityService identityService;
 
     @PutMapping("/updateDetails")
-    public void updateStaffDetails(@RequestBody UpdateStaffDetailsCommand updateStaffDetailsCommand) {
+    public void updateStaffDetails(@RequestBody UpdateStaffDetailsCommand updateStaffDetailsCommand) throws JsonProcessingException {
         UserDetails userDetails = UserDetails.userDetailsOf(updateStaffDetailsCommand.getUserId(), updateStaffDetailsCommand.getToken(), updateStaffDetailsCommand.getUsername());
         if(identityService.isAdmin(userDetails) || identityService.isSpecifiedUser(userDetails, updateStaffDetailsCommand.getUserId())) {
             applicationService.updateStaffDetails(updateStaffDetailsCommand);
