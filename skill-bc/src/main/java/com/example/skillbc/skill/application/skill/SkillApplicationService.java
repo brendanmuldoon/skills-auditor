@@ -12,7 +12,6 @@ import com.example.skillbc.skill.domain.common.Identity;
 import com.example.skillbc.skill.domain.skill.Skill;
 import com.example.skillbc.skill.infrastructure.skill.CategoryJpaValueObject;
 import com.example.skillbc.skill.infrastructure.skill.SkillJpa;
-import com.example.skillbc.skill.ui.skill.ISkillApplicationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -29,7 +28,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @Service
 @EnableJms
-public class SkillApplicationService implements ISkillApplicationService {
+public class SkillApplicationService {
 
     private ISkillRepository skillRepository;
     private ICategoryRepository categoryRepository;

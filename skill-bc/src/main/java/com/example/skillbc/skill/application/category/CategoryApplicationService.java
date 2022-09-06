@@ -8,7 +8,6 @@ import com.example.skillbc.skill.application.skill.events.SkillCategoryDeleteEve
 import com.example.skillbc.skill.domain.common.Identity;
 import com.example.skillbc.skill.domain.skill.Category;
 import com.example.skillbc.skill.infrastructure.skill.CategoryJpaValueObject;
-import com.example.skillbc.skill.ui.skill.ICategoryApplicationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -24,7 +23,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @Service
 @EnableJms
-public class CategoryApplicationService implements ICategoryApplicationService {
+public class CategoryApplicationService {
 
     private ICategoryRepository categoryRepository;
 
