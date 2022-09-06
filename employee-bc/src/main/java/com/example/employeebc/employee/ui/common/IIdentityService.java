@@ -1,4 +1,4 @@
-package com.example.employeebc.employee.ui.manager;
+package com.example.employeebc.employee.ui.common;
 
 import com.example.employeebc.employee.application.manager.commands.UserDetails;
 

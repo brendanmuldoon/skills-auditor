@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +341,8 @@
       <workItem from="1662015478498" duration="2969000" />
       <workItem from="1662018489126" duration="15951000" />
       <workItem from="1662369009902" duration="1120000" />
-      <workItem from="1662408396806" duration="2946000" />
+      <workItem from="1662408396806" duration="4388000" />
+      <workItem from="1662460014841" duration="347000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>

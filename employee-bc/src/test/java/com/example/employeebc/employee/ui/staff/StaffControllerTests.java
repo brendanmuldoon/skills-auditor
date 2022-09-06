@@ -1,25 +1,16 @@
 package com.example.employeebc.employee.ui.staff;
 
-import com.example.employeebc.employee.application.staff.commands.UpdateStaffDetailsCommand;
-import com.example.employeebc.employee.domain.common.Address;
-import com.example.employeebc.employee.domain.common.SecurityCredentials;
-import com.example.employeebc.employee.domain.staff.Staff;
-import com.example.employeebc.employee.ui.manager.IIdentityService;
+import com.example.employeebc.employee.ui.common.IIdentityService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 

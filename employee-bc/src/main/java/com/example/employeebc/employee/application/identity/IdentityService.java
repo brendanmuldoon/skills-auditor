@@ -1,7 +1,7 @@
 package com.example.employeebc.employee.application.identity;
 
 import com.example.employeebc.employee.application.manager.commands.UserDetails;
-import com.example.employeebc.employee.ui.manager.IIdentityService;
+import com.example.employeebc.employee.ui.common.IIdentityService;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
