@@ -25,11 +25,14 @@ public class FullName extends ValueObject {
 
     private void setSurname(String surname) {
         assertArgumentNotEmpty(surname, SURNAME_ERROR_MSG_EMPTY);
+        assertArgumentLength(surname, 1, 30, "Invalid surname length");
         this.surname = surname;
     }
 
     private void setFirstName(String firstName) {
         assertArgumentNotEmpty(firstName, FIRST_NAME_ERROR_MSG_EMPTY);
+        assertArgumentLength(firstName, 1, 30, "Invalid first name length");
+
         this.firstName=firstName;
     }
 
