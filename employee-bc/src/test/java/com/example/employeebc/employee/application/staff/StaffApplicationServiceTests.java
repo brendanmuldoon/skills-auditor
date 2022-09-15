@@ -9,6 +9,8 @@ import com.example.employeebc.employee.application.staff.mappers.StaffJpaToDTOMa
 import com.example.employeebc.employee.domain.common.*;
 import com.example.employeebc.employee.domain.staff.ExpirationDate;
 import com.example.employeebc.employee.domain.staff.Staff;
+import com.example.employeebc.employee.domain.staff.StaffSkill;
+import com.example.employeebc.employee.domain.staff.StrengthOfSkill;
 import com.example.employeebc.employee.domain.staff.interfaces.IAddStaffSkillCommand;
 import com.example.employeebc.employee.domain.staff.interfaces.IRemoveStaffSkillCommand;
 import com.example.employeebc.employee.domain.staff.interfaces.IUpdateStaffDetailsCommand;
@@ -72,11 +74,14 @@ public class StaffApplicationServiceTests {
 
         Optional<StaffJpa> staffJpa = generateValidStaffJpa();
         Staff staff = generateValidStaff();
+        staff.addSkill(new StaffSkill("123", StrengthOfSkill.ADVANCED, new ExpirationDate(12, 2022)));
 
         Mockito.when(staffRepository.findById(Mockito.anyString())).thenReturn(staffJpa);
         Mockito.when(staffJpaToStaffMapper.map(staffJpa.get())).thenReturn(staff);
         Mockito.when(staffToStaffJpaMapper.map(staff)).thenReturn(staffJpa.get());
-        Mockito.when(iRemoveStaffSkillCommand.getStaffId()).thenReturn("123");
+        Mockito.when(iRemoveStaffSkillCommand.getStaffId()).thenReturn("123");        Mockito.when(iRemoveStaffSkillCommand.getStaffId()).thenReturn("123");
+        Mockito.when(iRemoveStaffSkillCommand.getSkillId()).thenReturn("123");
+
 
         classUnderTest.removeStaffSkill(iRemoveStaffSkillCommand);
 
@@ -162,7 +167,12 @@ public class StaffApplicationServiceTests {
         IUpdateStaffSkillCommand updateStaffSkillCommand = Mockito.mock(IUpdateStaffSkillCommand.class);
         Optional<StaffJpa> staffJpa = generateValidStaffJpa();
         Staff staff = generateValidStaff();
+        staff.addSkill(new StaffSkill("123", StrengthOfSkill.ADVANCED, new ExpirationDate(12, 2022)));
+
         Mockito.when(updateStaffSkillCommand.getStaffId()).thenReturn("123");
+        Mockito.when(updateStaffSkillCommand.getSkillId()).thenReturn("123");
+        Mockito.when(updateStaffSkillCommand.getStrengthOfSkill()).thenReturn("BASIC");
+
         Mockito.when(staffRepository.findById(Mockito.anyString())).thenReturn(staffJpa);
         Mockito.when(staffJpaToStaffMapper.map(staffJpa.get())).thenReturn(staff);
         Mockito.when(staffToStaffJpaMapper.map(staff)).thenReturn(staffJpa.get());

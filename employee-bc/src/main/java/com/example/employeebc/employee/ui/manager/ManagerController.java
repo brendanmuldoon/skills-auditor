@@ -116,7 +116,6 @@ public class ManagerController {
             }
         }
         throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, USER_NOT_AUTHORISED_ERROR_MSG);
-
     }
 
     @PostMapping("/createCategory")
@@ -129,7 +128,6 @@ public class ManagerController {
         }
     }
 
-    // edit category
     @PutMapping("/editCategory")
     public void editCategory(@RequestBody EditCategoryCommand editCategoryCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(editCategoryCommand.getId(), editCategoryCommand.getToken(), editCategoryCommand.getUsername());
@@ -140,7 +138,6 @@ public class ManagerController {
         }
     }
 
-    // delete category
     @DeleteMapping("/deleteCategory")
     public void deleteCategory(@RequestBody DeleteCategoryCommand deleteCategoryCommand) {
         UserDetails userDetails = UserDetails.userDetailsOf(deleteCategoryCommand.getId(), deleteCategoryCommand.getToken(), deleteCategoryCommand.getUsername());
