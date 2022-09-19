@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723722ef-17ba-48ff-b88c-f3a11fb16bf0" name="Changes" comment="query handler">
+      <change afterPath="$PROJECT_DIR$/employee-bc/employeeBcUML.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/ui/manager/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/staff/StaffApplicationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/test/java/com/example/employeebc/employee/application/staff/StaffApplicationServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/ApplicationConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/identity/IdentityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/manager/ManagerQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-bc/src/main/java/com/example/employeebc/employee/application/staff/StaffApplicationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +80,12 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/skills-auditor-new-new/employee-bc/src/test/java/com/example/employeebc&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/612847413/OneDrive - BT Plc/Documents/Staffs Uni Work/Year 3/Enterprise Application Development/plantuml4idea.zip&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;39cc0d9a9780e60fe8f0583ae72c8448&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -345,7 +349,11 @@
       <workItem from="1662460014841" duration="8400000" />
       <workItem from="1662534563146" duration="8198000" />
       <workItem from="1663166536426" duration="5579000" />
-      <workItem from="1663225568815" duration="1848000" />
+      <workItem from="1663225568815" duration="2557000" />
+      <workItem from="1663233809144" duration="2074000" />
+      <workItem from="1663315177252" duration="122000" />
+      <workItem from="1663315314211" duration="9557000" />
+      <workItem from="1663578425623" duration="1480000" />
     </task>
     <task id="LOCAL-00001" summary="query handler">
       <created>1659713508065</created>
@@ -468,6 +476,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/skills_auditor_new_new$TestSuite.ic" NAME="TestSuite Coverage Results" MODIFIED="1661853759503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

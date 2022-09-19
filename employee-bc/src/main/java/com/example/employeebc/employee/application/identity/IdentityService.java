@@ -1,5 +1,6 @@
 package com.example.employeebc.employee.application.identity;
 
+import com.example.employeebc.ApplicationConstants;
 import com.example.employeebc.employee.application.manager.commands.UserDetails;
 import com.example.employeebc.employee.ui.common.IIdentityService;
 import org.springframework.http.HttpEntity;
@@ -11,12 +12,12 @@ import org.springframework.web.client.RestTemplate;
 public class IdentityService implements IIdentityService {
 
     public String validateAndGetRole(UserDetails command) {
-        String URL = "http://localhost:8082/validateRole";
+        String URL = ApplicationConstants.VALIDATE_ROLE_URL;
         return getResponseFromIdentityContext(command, URL);
     }
 
     public String getID(UserDetails command) {
-        String URL = "http://localhost:8082/id";
+        String URL = ApplicationConstants.GET_ID_URL;
         return getResponseFromIdentityContext(command, URL);
     }
 
@@ -41,6 +42,6 @@ public class IdentityService implements IIdentityService {
 
 
     public boolean isAdmin(UserDetails command){
-        return validateAndGetRole(command).equals("ADMIN");
+        return validateAndGetRole(command).equals(ApplicationConstants.ADMIN);
     }
 }

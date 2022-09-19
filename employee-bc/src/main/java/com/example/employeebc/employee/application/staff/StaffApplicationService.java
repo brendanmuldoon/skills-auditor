@@ -1,5 +1,6 @@
 package com.example.employeebc.employee.application.staff;
 
+import com.example.employeebc.ApplicationConstants;
 import com.example.employeebc.employee.application.manager.events.EmployeeDeleteSkillEvent;
 import com.example.employeebc.employee.application.manager.events.EmployeeUpdateUsernameAndPasswordEvent;
 import com.example.employeebc.employee.application.staff.interfaces.IStaffJpaToStaffMapper;
@@ -96,7 +97,7 @@ public class StaffApplicationService implements IStaffApplicationService {
                 event.setPassword(updateStaffDetailsCommand.getSecurityCredentials().password());
                 event.setUsername(updateStaffDetailsCommand.getSecurityCredentials().username());
                 String eventToJson = objectMapper.writeValueAsString(event);
-                jmsTemplate.convertAndSend("IDENTITY.UPDATE.QUEUE", eventToJson);
+                jmsTemplate.convertAndSend(ApplicationConstants.IDENTITY_UPDATE_QUEUE, eventToJson);
             }
         } else {
             throw new IllegalArgumentException(STAFF_ID_NOT_RECOGNISED_ERROR_MSG);
@@ -127,10 +128,8 @@ public class StaffApplicationService implements IStaffApplicationService {
     }
 
 
-    @JmsListener(destination = "EMPLOYEE.DELETE.SKILL.QUEUE")
+    @JmsListener(destination = ApplicationConstants.EMPLOYEE_DELETE_SKILL_QUEUE)
     public void deleteSkillListener(Message message) { // validation method to ensure skill is not deleted if it is in use
-
-        LOG.info("Received message from EMPLOYEE.DELETE.SKILL.QUEUE");
 
         try {
 
@@ -163,13 +162,13 @@ public class StaffApplicationService implements IStaffApplicationService {
 
                 if(inUse) {
 
-                    LOG.info("Cannot delete, Skill is in use");
+                    LOG.info(ApplicationConstants.SKILL_DELETE_ERROR_MSG);
 
                 } else {
 
                     String eventToJson = objectMapper.writeValueAsString(event);
 
-                    jmsTemplate.convertAndSend("SKILL.DELETE.QUEUE", eventToJson);
+                    jmsTemplate.convertAndSend(ApplicationConstants.SKILL_DELETE_QUEUE, eventToJson);
 
                 }
 

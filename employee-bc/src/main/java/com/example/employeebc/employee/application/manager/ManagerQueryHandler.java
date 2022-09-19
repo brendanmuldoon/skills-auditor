@@ -1,5 +1,6 @@
 package com.example.employeebc.employee.application.manager;
 
+import com.example.employeebc.ApplicationConstants;
 import com.example.employeebc.employee.application.manager.interfaces.IManagerJpaToManagerMapper;
 import com.example.employeebc.employee.application.manager.interfaces.IManagerRepository;
 import com.example.employeebc.employee.application.manager.mappers.ManagerJpaToDTOMapper;
@@ -66,7 +67,7 @@ public class ManagerQueryHandler implements IManagerQueryHandler {
     public EmployeeSkillDTOList findSkillsByCategory(String categoryId) {
 
 
-        String URL = String.format("http://localhost:8081/skill/findAllSkillsByCategory/%s", categoryId);
+        String URL = String.format(ApplicationConstants.FIND_ALL_SKILLS_BY_CATEGORY_ID, categoryId);
         EmployeeSkillDTOList myRequiredData = new EmployeeSkillDTOList();
 
         try {

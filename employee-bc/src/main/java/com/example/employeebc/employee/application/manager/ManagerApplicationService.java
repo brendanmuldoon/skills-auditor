@@ -1,5 +1,6 @@
 package com.example.employeebc.employee.application.manager;
 
+import com.example.employeebc.ApplicationConstants;
 import com.example.employeebc.employee.application.manager.events.*;
 import com.example.employeebc.employee.application.manager.interfaces.IManagerJpaToManagerMapper;
 import com.example.employeebc.employee.application.manager.interfaces.IManagerRepository;
@@ -20,13 +21,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.List;
 import java.util.Optional;
 
 import static com.example.employeebc.ApplicationConstants.MANAGER_ID_NOT_RECOGNISED_ERROR_MSG;
@@ -97,7 +95,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
         try {
             String eventToJson = objectMapper.writeValueAsString(event);
 
-            jmsTemplate.convertAndSend("SKILL.CREATE.QUEUE", eventToJson);
+            jmsTemplate.convertAndSend(ApplicationConstants.SKILL_CREATE_QUEUE, eventToJson);
 
         } catch (JsonProcessingException ex) {
             LOG.error(ex.getMessage());
@@ -115,7 +113,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
         try {
             String eventToJson = objectMapper.writeValueAsString(event);
 
-            jmsTemplate.convertAndSend("SKILL.EDIT.QUEUE", eventToJson);
+            jmsTemplate.convertAndSend(ApplicationConstants.SKILL_EDIT_QUEUE, eventToJson);
 
         } catch (JsonProcessingException ex) {
             LOG.error(ex.getMessage());
@@ -132,7 +130,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
             try {
                 String eventToJson = objectMapper.writeValueAsString(event);
 
-                jmsTemplate.convertAndSend("EMPLOYEE.DELETE.SKILL.QUEUE", eventToJson);
+                jmsTemplate.convertAndSend(ApplicationConstants.EMPLOYEE_DELETE_SKILL_QUEUE, eventToJson);
 
             } catch (JsonProcessingException ex) {
                 LOG.error(ex.getMessage());
@@ -152,9 +150,8 @@ public class ManagerApplicationService implements IManagerApplicationService {
         try {
             String eventToJson = objectMapper.writeValueAsString(event);
 
-            jmsTemplate.convertAndSend("CATEGORY.CREATE.QUEUE", eventToJson);
+            jmsTemplate.convertAndSend(ApplicationConstants.CATEGORY_CREATE_QUEUE, eventToJson);
 
-            LOG.info("Message sent to CATEGORY.CREATE.QUEUE");
         } catch (JsonProcessingException ex) {
             LOG.error(ex.getMessage());
         }
@@ -171,7 +168,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
         try {
             String eventToJson = objectMapper.writeValueAsString(event);
 
-            jmsTemplate.convertAndSend("CATEGORY.EDIT.QUEUE", eventToJson);
+            jmsTemplate.convertAndSend(ApplicationConstants.CATEGORY_EDIT_QUEUE, eventToJson);
 
         } catch (JsonProcessingException ex) {
             LOG.error(ex.getMessage());
@@ -188,7 +185,7 @@ public class ManagerApplicationService implements IManagerApplicationService {
         try {
             String eventToJon = objectMapper.writeValueAsString(event);
 
-            jmsTemplate.convertAndSend("SKILL.CATEGORY.DELETE.QUEUE", eventToJon);
+            jmsTemplate.convertAndSend(ApplicationConstants.SKILL_CATEGORY_DELETE_QUEUE, eventToJon);
         } catch (JsonProcessingException ex) {
             LOG.error(ex.getMessage());
         }
